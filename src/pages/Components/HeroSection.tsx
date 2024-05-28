@@ -26,14 +26,14 @@ const HeroSection = () => {
     const navigate = useNavigate();
 
     const moreButton = () => {
-        navigate('/#about');
+        navigate('/about');
     }
 
     return (
         <>
-            <section id="hero">
-                <div className="flex flex-col justify-center items-center h-screen min-h-screen pb-40 mb-56">
-                    <div className="flex flex-col -mt-10">
+            <section id="hero ">
+                <div className="flex flex-col justify-center items-center  min-h-screen  ">
+                    <div className="flex flex-col ">
                         <h1 className="text-2xl md:text-8xl text-blue-900">
                             Hi, I'm <span className="text-blue-900">Aiman Errajiy</span>
                         </h1>

@@ -26,7 +26,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div onClick={handleNav} className='fixed right-4 top-7 md:hidden mr-4 z-10 '>
+            <div onClick={handleNav} className='fixed right-4 top-7 md:hidden mr-4 z-20 '>
                 {
                     !nav
                         ?
@@ -52,7 +52,7 @@ const Navbar = () => {
                 }
             </div>
 
-            <div className='bg-blue-100 flex justify-between items-center h-24 px-4 text-white rounded-sm sticky z-4 top-0 md:max-w-[100%] max-w-[100%]'>
+            <div className='flex justify-between items-center h-24 px-4 text-white rounded-sm fixed z-4 top-0 w-full md:max-w-[100%] max-w-[100%]'>
                 <div>
                     <img src={NavImages} alt="tailwindcss_logo" width="50px"
                         className="filter grayscale contrast-150 shadow-md border-slate-500 ring-1 ring-red-600/6 rounded-lg m-4" />
@@ -83,7 +83,7 @@ const Navbar = () => {
                 <ul
                     className={
                         nav
-                            ? 'fixed md:hidden rounded-sm left-0 top-[0] w-full h-screen border-r border-r-gray-900 bg-blue-400/0 ease-in-out duration-500 navDropdown'
+                            ? 'fixed md:hidden rounded-sm left-0 top-[0] w-full h-screen border-r border-r-gray-900 bg-blue-400/0 ease-in-out duration-500 z-20 navDropdown'
                             : 'ease-in-out duration-500  left-0 fixed w-full top-[-100%]'
                     }
                 >

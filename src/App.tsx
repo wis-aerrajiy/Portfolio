@@ -16,24 +16,16 @@ class App extends Component {
             <>
                 <Router>
                     <NavBar />
-                    <div>
+                    <div className='min-h-screen'>
                         <Routes>
                             <Route path="/"
-                                element={
-                                    <>
-                                        {/* <CircularFloatingElement numElements={5} rotationSpeed={0.2} /> */}
-                                        <Home />
-                                    </>}
+                                element={ <> <Home /> </>}
                             />
                             <Route path="/about"
-                                element={
-                                    <About />
-                                }
+                                element={ <About /> }
                             />
                             <Route path="*"
-                                element={
-                                    <CircularFloatingElement numElements={5} rotationSpeed={0.2} />
-                                }
+                                element={ <CircularFloatingElement numElements={5} rotationSpeed={0.2} /> }
                             />
                         </Routes>
                     </div>

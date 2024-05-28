@@ -1,15 +1,13 @@
-import { lazy, Suspense} from 'react';
+import { lazy, Suspense } from 'react';
 
 const HeroSection = lazy(() => import('./Components/HeroSection'));
 
 export const Home = () => {
     return (
         <>
-            <div className="flex flex-col justify-center items-center">
-                <Suspense fallback={<div>Loading...</div>}>
-                    <HeroSection />
-                </Suspense>
-            </div>
+            <Suspense fallback={<div>Loading...</div>}>
+                <HeroSection />
+            </Suspense>
 
             {/* <section id="hero" className="md:mt-20">
                 <div className="container mx-auto px-6 flex flex-col-reverse space-x-6 md:flex-row">
