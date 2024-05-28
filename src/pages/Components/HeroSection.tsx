@@ -32,7 +32,7 @@ const HeroSection = () => {
     return (
         <>
             <section id="hero ">
-                <div className="flex flex-col justify-center items-center  min-h-screen  ">
+                <div className="flex flex-col justify-center items-center  min-h-screen">
                     <div className="flex flex-col ">
                         <h1 className="text-2xl md:text-8xl text-blue-900">
                             Hi, I'm <span className="text-blue-900">Aiman Errajiy</span>

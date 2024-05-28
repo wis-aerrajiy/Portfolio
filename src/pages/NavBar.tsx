@@ -65,7 +65,7 @@ const Navbar = () => {
                                 to={item.link.toLowerCase()}
                                 key={item.id}
                             >
-                                <div className='flex items-center flex-row-reverse px-10 py-3 hover:bg-red-100/75 rounded-xl m-10 cursor-pointer duration-300 hover:text-black text-black' >
+                                <div className='flex items-center flex-row-reverse px-6 py-3 hover:bg-red-100/75 rounded-xl m-2 cursor-pointer duration-300 hover:text-black text-black' >
                                     <div>
                                         {item.text}
                                     </div>

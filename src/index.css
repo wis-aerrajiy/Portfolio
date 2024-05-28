@@ -22,6 +22,19 @@ html,
     font-style: normal; */
 }
 
+
+
+/* Hide scrollbar for Firefox */
+.myscrollbar {
+    scrollbar-width: none;
+  }
+  
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+  .myscrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+
 /* [
     {
        files {} 
