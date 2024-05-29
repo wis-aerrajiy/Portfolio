@@ -12,6 +12,7 @@ import { LuMessageCircle } from "react-icons/lu";
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
+    const [selectNav, setSelectNav] = useState(0);
 
     const handleNav = () => {
         setNav(!nav);
@@ -26,7 +27,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div onClick={handleNav} className='fixed right-4 top-7 md:hidden mr-4 z-20 '>
+            <div onClick={handleNav} className='fixed right-4 top-7 md:hidden mr-4 z-40 '>
                 {
                     !nav
                         ?
@@ -52,7 +53,7 @@ const Navbar = () => {
                 }
             </div>
 
-            <div className='flex justify-between items-center h-24 px-4 text-white rounded-sm fixed z-4 top-0 w-full md:max-w-[100%] max-w-[100%]'>
+            <div className='flex z-20 justify-between items-center h-24 px-4 text-white rounded-sm fixed top-0 w-full md:max-w-[100%] max-w-[100%]'>
                 <div>
                     <img src={NavImages} alt="tailwindcss_logo" width="50px"
                         className="filter grayscale contrast-150 shadow-md border-slate-500 ring-1 ring-red-600/6 rounded-lg m-4" />
@@ -60,12 +61,21 @@ const Navbar = () => {
 
                 <ul className='hidden md:flex'>
                     {
-                        navItems.map(item => (
+                        navItems.map((item, index) => (
                             <Link
                                 to={item.link.toLowerCase()}
                                 key={item.id}
+                                onClick={() => setSelectNav(index)}
                             >
-                                <div className='flex items-center flex-row-reverse px-6 py-3 hover:bg-red-100/75 rounded-xl m-2 cursor-pointer duration-300 hover:text-black text-black' >
+                                <div
+                                    className={
+                                        `
+                                        flex items-center flex-row-reverse px-6 py-3  rounded-xl m-2 cursor-pointer duration-300 text-black
+                                        hover:bg-red-100/75 hover:text-black
+                                        ${selectNav === index && 'bg-red-100/75 text-black'}
+                                        `
+                                    }
+                                >
                                     <div>
                                         {item.text}
                                     </div>
@@ -83,7 +93,7 @@ const Navbar = () => {
                 <ul
                     className={
                         nav
-                            ? 'fixed md:hidden rounded-sm left-0 top-[0] w-full h-screen border-r border-r-gray-900 bg-blue-400/0 ease-in-out duration-500 z-20 navDropdown'
+                            ? 'fixed md:hidden rounded-sm left-0 top-[0] w-full h-screen border-r border-r-gray-900 bg-blue-400/0 ease-in-out duration-500 z-40 navDropdown '
                             : 'ease-in-out duration-500  left-0 fixed w-full top-[-100%]'
                     }
                 >
