@@ -24,9 +24,9 @@ const AboutSection = () => {
     return (
         <>
             <section id="about">
-                <div className='flex flex-col md:flex-row justify-center items-center min-h-screen space-y-20 md:space-y-0 md:space-x-20 mt-24 md:mt-0'>
+                <div className='flex flex-col lg:flex-row justify-center items-center min-h-screen space-y-20 md:space-y-0 lg:space-x-20 mt-24 lg:mt-0'>
 
-                    <div className='flex flex-col justify-start items-center h-[auto] lg:h-[70vh] min-w-[auto] max-w-[90vw] ring-1 ring-gray-200 shadow-sm rounded-lg px-5' >
+                    <div className='flex md:flex-col justify-start items-center h-[auto] md:h-[80vh] min-w-[auto] max-w-[90vw] ring-1 ring-gray-200 shadow-sm rounded-lg px-5 mx-5' >
                         <div className='max-w-[70vw]'>
                             <div className='relative -z-1'>
                                 <img src={profile} alt="profile" className='rounded-lg mt-10 w-[500px] h-[200px] md:h-[300px] object-cover rotate-[5deg] filter grayscale contrast-150 shadow-2xl' />
@@ -41,7 +41,7 @@ const AboutSection = () => {
                             </p>
 
                         </div>
-
+{/* 
                         <div>
                             <ul className='flex justify-between items-center space-x-20 mt-10'>
                                 {
@@ -63,14 +63,99 @@ const AboutSection = () => {
                                     ))
                                 }
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div
-                        className='md:overflow-scroll myscrollbar ring-1 ring-gray-200 shadow-md max-w-[90vw] lg:max-w-[50vw] md:h-[70vh] px-8 pb-8 rounded-lg bg-gray-600/10 space-y-20 p-5'
+                        className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[80vh]  rounded-lg  p-5 mx-5'
                     >
 
-                        <div className=' flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
+                        <div className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600">
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 1</h1>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <p className="text-lg text-slate-500 text-justify font-serif">
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col stickyNote taped space-y-5">
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 2</h1>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <p className="text-lg text-slate-500 text-justify font-serif">
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            className="
+                            md:col-start-2 md:col-span-1 md:row-start-2 md:row-span-3
+                            flex flex-col stickyNote taped space-y-5"
+                        >
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 3</h1>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <p className="text-lg text-slate-500 text-justify font-serif">
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col stickyNote taped space-y-5">
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 4</h1>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <p className="text-lg text-slate-500 text-justify font-serif">
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col stickyNote taped space-y-5">
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 5</h1>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <p className="text-lg text-slate-500 text-justify font-serif">
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col stickyNote taped space-y-5">
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 6</h1>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <p className="text-lg text-slate-500 text-justify font-serif">
+                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* <div className='absolute top-52 flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
                             <div className='flex justify-start items-start w-full'>
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me</h1>
                             </div>
@@ -88,7 +173,7 @@ const AboutSection = () => {
                             </div>
                         </div>
 
-                        <div className=' flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
+                        <div className='hidden flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
                             <div className='flex justify-start items-start w-full'>
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >Education</h1>
                             </div>
@@ -101,7 +186,7 @@ const AboutSection = () => {
                             </div>
                         </div>
 
-                        <div className=' flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
+                        <div className='hidden flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
                             <div className='flex justify-start items-start w-full'>
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >Education</h1>
                             </div>
@@ -114,7 +199,7 @@ const AboutSection = () => {
                             </div>
                         </div>
 
-                        <div className=' flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
+                        <div className='hidden flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
                             <div className='flex justify-start items-start w-full'>
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >Education</h1>
                             </div>
@@ -127,7 +212,7 @@ const AboutSection = () => {
                             </div>
                         </div>
 
-                        <div className=' flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
+                        <div className='hidden flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
                             <div className='flex justify-start items-start w-full'>
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >Education</h1>
                             </div>
@@ -138,7 +223,7 @@ const AboutSection = () => {
                                     I have a solid understanding of computer science and software development, as well as experience in web development.
                                 </p>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>

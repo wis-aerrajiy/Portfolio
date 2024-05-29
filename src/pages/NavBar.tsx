@@ -29,7 +29,7 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 25) {
-                setIsLogoVisible(false); 
+                setIsLogoVisible(false);
             } else {
                 setIsLogoVisible(true);
             }
@@ -90,8 +90,7 @@ const Navbar = () => {
                                 <div
                                     className={
                                         `
-                                        flex items-center flex-row-reverse px-6 py-3  rounded-xl m-2 cursor-pointer duration-300 text-black
-                                        hover:bg-red-100/75 hover:text-black
+                                        flex items-center flex-row-reverse px-6 py-3  rounded-xl m-2 cursor-pointer duration-300 text-black hover:bg-red-100/75 hover:text-black
                                         ${selectNav === index && 'bg-red-100/75 text-black'}
                                         `
                                     }
@@ -117,16 +116,6 @@ const Navbar = () => {
                             : 'ease-in-out duration-500  left-0 fixed w-full top-[-100%]'
                     }
                 >
-
-                    {/* <div className='flex justify-end m-8 ease-linear duration-500'>
-                        <button className="text-2xl text-blue-900/50" onClick={handleNav}>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div> */}
 
                     <div className='flex flex-col items-stretch justify-center h-full w-full space-y-10'>
                         {navItems.map(item => (
