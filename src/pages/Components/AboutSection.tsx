@@ -83,7 +83,6 @@ const AboutSection = () => {
                             <Draggable
                             allowAnyClick={true}
                             bounds="parent"
-                            defaultPosition={{ x: 0, y: 0 }}
                             disabled={true}
                             >
                                 <div
