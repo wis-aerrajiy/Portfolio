@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import NavImages from '../assets/nav/wis_logo.jpg';
@@ -13,6 +13,7 @@ import { LuMessageCircle } from "react-icons/lu";
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const [selectNav, setSelectNav] = useState(0);
+    const [isLogoVisible, setIsLogoVisible] = useState(true);
 
     const handleNav = () => {
         setNav(!nav);
@@ -25,6 +26,22 @@ const Navbar = () => {
         { id: 3, text: 'Contact', link: '/contact', icon: LuMessageCircle },
     ];
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 25) {
+                setIsLogoVisible(false); 
+            } else {
+                setIsLogoVisible(true);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
             <div onClick={handleNav} className='fixed right-4 top-7 md:hidden mr-4 z-40 '>
@@ -33,7 +50,7 @@ const Navbar = () => {
                         ?
                         (
                             <button className="text-2xl text-blue-900/50">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                         d="M4 6h16M4 12h16m-7 6h7" />
@@ -43,7 +60,7 @@ const Navbar = () => {
                         :
                         (
                             <button className="text-2xl text-blue-900/50" onClick={handleNav}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                         d="M6 18L18 6M6 6l12 12" />
@@ -56,7 +73,10 @@ const Navbar = () => {
             <div className='flex z-20 justify-between items-center h-24 px-4 text-white rounded-sm fixed top-0 w-full md:max-w-[100%] max-w-[100%]'>
                 <div>
                     <img src={NavImages} alt="tailwindcss_logo" width="50px"
-                        className="filter grayscale contrast-150 shadow-md border-slate-500 ring-1 ring-red-600/6 rounded-lg m-4" />
+                        className={`
+                            filter grayscale contrast-150 shadow-md border-slate-500 ring-1 ring-red-600/6 rounded-lg m-4
+                            ${!isLogoVisible && 'hidden'}
+                        `} />
                 </div>
 
                 <ul className='hidden md:flex'>

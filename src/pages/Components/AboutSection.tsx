@@ -26,8 +26,8 @@ const AboutSection = () => {
             <section id="about">
                 <div className='flex flex-col md:flex-row justify-center items-center min-h-screen space-y-20 md:space-y-0 md:space-x-20 mt-24 md:mt-0'>
 
-                    <div className='flex flex-col justify-start items-center h-[auto] md:h-[70vh] min-w-[49vh] max-w-[90vw] ring-1 ring-gray-200 shadow-sm rounded-lg p-5' >
-                        <div className=' max-w-[80vw]'>
+                    <div className='flex flex-col justify-start items-center h-[auto] lg:h-[70vh] min-w-[auto] max-w-[90vw] ring-1 ring-gray-200 shadow-sm rounded-lg px-5' >
+                        <div className='max-w-[70vw]'>
                             <div className='relative -z-1'>
                                 <img src={profile} alt="profile" className='rounded-lg mt-10 w-[500px] h-[200px] md:h-[300px] object-cover rotate-[5deg] filter grayscale contrast-150 shadow-2xl' />
                                 <img src={dabous} alt="dabous" className='absolute -top-4 left-[40%] md:left-[45%] rounded-lg w-[50px] filter  contrast-150 ' />
@@ -67,7 +67,7 @@ const AboutSection = () => {
                     </div>
 
                     <div
-                        className='md:overflow-scroll myscrollbar ring-1 ring-gray-200 shadow-md max-w-[90vw] md:max-w-[50vw] md:h-[70vh] px-8 pb-8 rounded-lg bg-gray-600/10 space-y-20 p-5'
+                        className='md:overflow-scroll myscrollbar ring-1 ring-gray-200 shadow-md max-w-[90vw] lg:max-w-[50vw] md:h-[70vh] px-8 pb-8 rounded-lg bg-gray-600/10 space-y-20 p-5'
                     >
 
                         <div className=' flex flex-col justify-center items-center min-w-[100%] bg-gray-20/15 space-y-5'>
