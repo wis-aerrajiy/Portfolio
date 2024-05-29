@@ -8,65 +8,65 @@
 body,
 html,
 .navDropdown {
-  height: 100%;
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ccircle fill='rgb(220,220,220)' cx='3' cy='3' r='1.5'/%3E%3C/svg%3E");
-  /* background-image: url("/background.svg"); 234, 234, 241*/
-  height: 100%;
-  background-position: center;
-  background-repeat: repeat;
+    height: 100%;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ccircle fill='rgb(220,220,220)' cx='3' cy='3' r='1.5'/%3E%3C/svg%3E");
+    /* background-image: url("/background.svg"); 234, 234, 241*/
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
 }
 
 * {
 
-  font-family: 'Solway', 'Solway Placeholder', sans-serif;
-  /* font-weight: 900;
-    font-style: normal; */
+    font-family: 'Solway', 'Solway Placeholder', sans-serif;
+    /* font-weight: 900; */
+    font-style: normal;
 }
 
 
 
 /* Hide scrollbar for Firefox */
 .myscrollbar {
-  scrollbar-width: none;
+    scrollbar-width: none;
 }
 
 /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
 .myscrollbar::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 
 .stickyNote {
-  position: relative;
-  -webkit-box-shadow: #DDD 0px 1px 2px;
-  background-color: #F4F39E;
-  /* border-color: #DEE184; */
-  /* color: #47576B; */
-  margin: 2.5em 0px;
-  padding: 1.5em 1em;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  font-family: 'Indie Flower', cursive;
-  font-family: 'Give You Glory', cursive;
-  font-family: 'The Girl Next Door', cursive;
-  font-family: 'Gloria Hallelujah', cursive;
+    position: relative;
+    -webkit-box-shadow: #DDD 0px 1px 2px;
+    /* background-color: #F4F39E; */
+    /* border-color: #DEE184; */
+    /* color: #47576B; */
+    margin: 2.5em 0px;
+    padding: 1.5em 1em;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Give You Glory', cursive;
+    font-family: 'The Girl Next Door', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .stickyNote.taped:after {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 110px;
-  height: 30px;
-  top: -21px;
-  left: 37%;
-  border: 1px solid #fff;
-  background: rgba(156, 152, 152, 0.6);
-  -webkit-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    display: block;
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    top: -21px;
+    left: 37%;
+    border: 1px solid #fff;
+    background: rgba(156, 152, 152, 0.6);
+    -webkit-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
 }
 
 /* [

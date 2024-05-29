@@ -8,6 +8,8 @@ import { SiLinkedin } from "react-icons/si";
 import { FaTwitter } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Draggable from 'react-draggable';
+import { CSSTransition } from 'react-transition-group';
 
 const socials = [
     { id: 0, link: '', icon: FaGithub },
@@ -19,6 +21,11 @@ const PersonalInfo = [
     { id: 0, icon: FaPhoneAlt, info: '+212 658506376' },
     { id: 1, icon: MdEmail, info: 'aerrajiy.intra@gmail.com' },
 ]
+
+// function alert the id of the clicked element
+function handleClick(element: any) {
+    console.log(element);
+}
 
 const AboutSection = () => {
     return (
@@ -41,46 +48,67 @@ const AboutSection = () => {
                             </p>
 
                         </div>
-{/* 
-                        <div>
-                            <ul className='flex justify-between items-center space-x-20 mt-10'>
-                                {
-                                    socials.map(item => (
-                                        <li key={item.id} className='p-4 rounded-lg flex items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2'> <item.icon /> </li>
-                                    ))
-                                }
-                            </ul>
-                        </div>
-
-                        <div className=' mt-10 max-w-[100%]'>
-                            <ul className='flex flex-col justify-between items-center gap-5'>
-                                {
-                                    PersonalInfo.map(item => (
-                                        <li key={item.id} className='m-5 w-full p-4 rounded-lg flex flex-row items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2'>
-                                            <item.icon className='mx-3' />
-                                            <span>{item.info}</span>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
-                        </div> */}
+                        {
+                            /* 
+                            <div>
+                                <ul className='flex justify-between items-center space-x-20 mt-10'>
+                                    {
+                                        socials.map(item => (
+                                            <li key={item.id} className='p-4 rounded-lg flex items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2'> <item.icon /> </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+    
+                            <div className=' mt-10 max-w-[100%]'>
+                                <ul className='flex flex-col justify-between items-center gap-5'>
+                                    {
+                                        PersonalInfo.map(item => (
+                                            <li key={item.id} className='m-5 w-full p-4 rounded-lg flex flex-row items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2'>
+                                                <item.icon className='mx-3' />
+                                                <span>{item.info}</span>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div> */
+                        }
                     </div>
 
                     <div
-                        className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[80vh]  rounded-lg  p-5 mx-5'
+                        className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[80vh]  rounded-lg  p-5 mx-5'
                     >
 
-                        <div className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600">
-                            <div className='flex justify-center items-center w-full'>
-                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 1</h1>
-                            </div>
+                        <CSSTransition in={true} timeout={200} classNames="my-transition">
+                            <Draggable
+                            allowAnyClick={true}
+                            bounds="parent"
+                            defaultPosition={{ x: 0, y: 0 }}
+                            disabled={true}
+                            >
+                                <div
+                                    className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F4F39E]/25"
+                                >
+                                    <div className='flex justify-center items-center w-full'>
+                                        <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 1</h1>
+                                    </div>
 
-                            <div className="flex flex-col">
-                                <p className="text-lg text-slate-500 text-justify font-serif">
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                </p>
-                            </div>
-                        </div>
+                                    <div className="flex flex-col gap-5">
+                                        <p className="text-lg text-slate-500 text-justify font-serif">
+                                            I am a 24-year-old software developer at 1337 Coding School and a passionate full-stack developer.
+                                            Specializing in Back-end development, database management, and Dev-Ops workflow.
+                                            I thrive on creative problem-solving. I am dedicated to crafting innovative digital solutions.
+                                        </p>
+                                        <p className="text-lg text-slate-500 text-justify font-serif">
+                                            I've got a solid grasp of computer science and software development from my studies.
+                                            I'm comfortable with several programming languages and have built web applications during my time at university.
+                                            Plus, I'm familiar with tools like Git, Docker, and Kubernetes, which I've used in projects and assignments.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </Draggable>
+                        </CSSTransition>
 
                         <div className="flex flex-col stickyNote taped space-y-5">
                             <div className='flex justify-center items-center w-full'>
@@ -89,7 +117,7 @@ const AboutSection = () => {
 
                             <div className="flex flex-col">
                                 <p className="text-lg text-slate-500 text-justify font-serif">
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
                                 </p>
                             </div>
                         </div>
@@ -105,16 +133,16 @@ const AboutSection = () => {
 
                             <div className="flex flex-col">
                                 <p className="text-lg text-slate-500 text-justify font-serif">
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
                                 </p>
                             </div>
                         </div>
@@ -126,7 +154,7 @@ const AboutSection = () => {
 
                             <div className="flex flex-col">
                                 <p className="text-lg text-slate-500 text-justify font-serif">
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
                                 </p>
                             </div>
                         </div>
@@ -138,7 +166,7 @@ const AboutSection = () => {
 
                             <div className="flex flex-col">
                                 <p className="text-lg text-slate-500 text-justify font-serif">
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
                                 </p>
                             </div>
                         </div>
@@ -150,7 +178,7 @@ const AboutSection = () => {
 
                             <div className="flex flex-col">
                                 <p className="text-lg text-slate-500 text-justify font-serif">
-                                As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
                                 </p>
                             </div>
                         </div>
