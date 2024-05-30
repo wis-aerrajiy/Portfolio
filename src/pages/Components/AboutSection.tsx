@@ -8,8 +8,9 @@ import { SiLinkedin } from "react-icons/si";
 import { FaTwitter } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { RxDownload } from "react-icons/rx";
+import { FaCheckDouble } from "react-icons/fa6";
 import Draggable from 'react-draggable';
-// import { CSSTransition } from 'react-transition-group';
 
 const socials = [
     { id: 0, link: '', icon: FaGithub },
@@ -20,6 +21,15 @@ const socials = [
 const PersonalInfo = [
     { id: 0, icon: FaPhoneAlt, info: '+212 658506376' },
     { id: 1, icon: MdEmail, info: 'aerrajiy.intra@gmail.com' },
+];
+
+const Skills = [
+    { "id": 0, "name": "HTML5", "level": "90%" },
+    { "id": 1, "name": "CSS3", "level": "85%" },
+    { "id": 2, "name": "JavaScript", "level": "80%" },
+    { "id": 3, "name": "React", "level": "75%" },
+    { "id": 4, "name": "Node.js", "level": "70%" },
+    { "id": 5, "name": "Express.js", "level": "70%" },
 ]
 
 const AboutSection = () => {
@@ -28,27 +38,63 @@ const AboutSection = () => {
             <section id="about">
                 <div className='flex flex-col lg:flex-row justify-center items-center min-h-screen space-y-5 md:space-y-0 lg:space-x-50 mt-24 lg:mt-0'>
 
-                    <div className=' grid grid-cols-1 h-[auto] w-[90vw] lg:w-[auto] lg:h-[80vh] max-w-[90vw] ring-1 ring-gray-200 shadow-sm rounded-lg px-10 mx-1' >
-                        <div className='max-w-[90vw]'>
+                    <div className='grid grid-cols-1 h-[auto] w-[90vw] lg:w-[auto] md:h-[90vh] max-w-[90vw] rounded-lg m-auto' >
+                        <div className='mx-5'>
                             <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
-                                <div className='relative -z-1 m-5'>
+                                <div className='relative -z-1 ring-1 ring-gray-600/15'>
                                     <img
                                         src="https://badge.mediaplus.ma/darkblue/aerrajiy"
                                         alt="profile"
-                                        className='rounded-lg mt-10 w-[100%] object-cover rotate-[5deg] filter opacity-90 shadow-2xl' />
+                                        className='rounded-lg w-[100%] object-cover rotate-[5deg] filter opacity-90 shadow-2xl' />
                                     <img src={dabous} alt="dabous" className='absolute -top-4 left-[40%] md:left-[45%] rounded-lg w-[50px] filter  contrast-150 ' />
                                 </div>
-                            </div>
 
-                            <h3 className="text-2xl md:text-4xl text-blue-900 underline mt-10">
-                                Aiman Errajiy
-                            </h3>
-                            <p className="text-lg md:text-lg text-slate-500 ml-20">
-                                Else Known As <span className="text-blue-900 underline-offset-8 underline px-3">Wis</span>
-                            </p>
+                                <h3 className="text-2xl md:text-4xl text-blue-900 underline rotate-6 mt-5">
+                                    Aiman Errajiy
+                                </h3>
+
+                                <p className="text-lg md:text-lg text-slate-500 ml-20 rotate-6 mt-2">
+                                    Also Known As <span className="text-blue-900 underline-offset-8 underline px-3">Wis</span>
+                                </p>
+                            </div>
                         </div>
 
-                        <div className=''>
+                        <div className='mx-5'>
+                            <div className="stickyNote taped bg-[#A9F4DB] mx-5 ">
+
+                                <div className=''>
+                                    <ul className='flex justify-evenly items-center'>
+                                        {
+                                            socials.map(item => (
+                                                <li key={item.id} className='p-4 rounded-lg flex items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2'> <item.icon /> </li>
+                                            ))
+                                        }
+                                    </ul>
+
+                                    <div className=' mt-10 max-w-[100%]'>
+                                        <ul className='flex flex-col justify-between items-center gap-5'>
+                                            {
+                                                PersonalInfo.map(item => (
+                                                    <li key={item.id} className='m-5 w-full p-4 rounded-lg flex flex-row items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2'>
+                                                        <item.icon className='mx-3' />
+                                                        <span>{item.info}</span>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {/* <div className='mx-5'>
+                            <div className="stickyNote bg-[#A9F4DB]/40 mx-5">
+
+                            </div>
+                        </div> */}
+                        {/* <div className=''>
                             <ul className='flex justify-between items-center space-x-20 mt-10'>
                                 {
                                     socials.map(item => (
@@ -56,9 +102,9 @@ const AboutSection = () => {
                                     ))
                                 }
                             </ul>
-                        </div>
+                        </div> */}
 
-                        <div className=' mt-10 max-w-[100%]'>
+                        {/* <div className=' mt-10 max-w-[100%]'>
                             <ul className='flex flex-col justify-between items-center gap-5'>
                                 {
                                     PersonalInfo.map(item => (
@@ -69,26 +115,25 @@ const AboutSection = () => {
                                     ))
                                 }
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div
-                        className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[80vh]  rounded-lg  p-5 mx-5'
+                        className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[90vh]  rounded-lg  p-5 mx-5'
                     >
 
                         <Draggable
-                            allowAnyClick={true}
-                            disabled={false}
+                            disabled={true}
                         >
                             <div
-                                className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F6EDA9] !rotate-[-3deg]"
+                                className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F6EDA9]/55 md:!rotate-[-3deg]"
                             >
                                 <div className='flex justify-center items-center w-full'>
-                                    <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 1</h1>
+                                    <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >Who Am I ?</h1>
                                 </div>
 
                                 <div className="flex flex-col gap-5">
-                                    <p className="text-lg text-slate-500 text-justify font-serif">
+                                    <p className="text-lg text-slate-500 text-justify font-gochi">
                                         I am a 24-year-old software developer at 1337 Coding School and a passionate full-stack developer.
                                         Specializing in Back-end development, database management, and Dev-Ops workflow.
                                         I thrive on creative problem-solving. I am dedicated to crafting innovative digital solutions.
@@ -98,73 +143,110 @@ const AboutSection = () => {
 
                         </Draggable>
 
-                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#F0F0F0] !rotate-[-3deg]">
+                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#F0F0F0]/55 md:!rotate-[-3deg]">
                             <div className='flex justify-center items-center w-full'>
-                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >Education</h1>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-solway' >My Journey</h1>
                             </div>
 
                             <div className="flex flex-col">
-                                <p className="text-lg text-slate-500 text-justify font-serif">
-                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
+                                <p className="text-lg text-slate-500 text-justify font-serif font-solway">
+                                    with over 2 years of study in computer science and software develepment, I have developed a strong understanding of software development and computer science fundamentals.
                                 </p>
                             </div>
                         </div>
 
                         <div
                             className="
-                            md:col-start-1 md:col-span-2 md:row-start-2 md:row-span-2
-                            flex flex-col stickyNote taped space-y-5 bg-[#D9F5AA] rotate-[3deg]"
+                            md:col-start-1 md:col-span-1 md:row-start-2 md:row-span-1
+                            flex flex-col stickyNote taped space-y-5 bg-[#D9F5AA]/55 md:rotate-[3deg]"
                         >
                             <div className='flex justify-center items-center w-full'>
-                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 3</h1>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >My Skilles</h1>
                             </div>
 
-                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 shadow-md  md:gap-8 lg:grid-cols-2 ">
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
-                                <div className='bg-red-500'>A</div>
+                            <Draggable>
+                                <div className='flex flex-row gap-5 justify-center items-center bg-slate-700/40 mx-auto px-6 py-3 rounded-md'>
+                                    <RxDownload /> Download Resume
+                                </div>
+                            </Draggable>
+
+                            <div className="grid grid-cols-1 gap-4 md:gap-8 ">
+                                {
+                                    Skills.map(skill => (
+                                        <div key={skill.id} className="flex flex-row justify-between items-center px-4 py-2 border-b-2 border-red-800">
+                                            <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
+                                            <div className='flex flex-row items-center'>
+                                                <div className='w-[100px] bg-slate-700/40 rounded-md'>
+                                                    <div className='bg-blue-500 h-[100%] rounded-md' ></div>
+                                                </div>
+                                                <span className='font-gochi'>{skill.level}</span>
+                                            </div>
+                                            <FaCheckDouble />
+                                        </div>
+                                    ))
+                                }
+
                             </div>
                         </div>
 
-                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#AAE5F5] rotate-[12deg]">
+                        <div
+                            className="
+                            flex flex-col stickyNote taped space-y-5 bg-[#D9F5AA]/55 md:rotate-[3deg]"
+                        >
                             <div className='flex justify-center items-center w-full'>
-                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 4</h1>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >My Skilles</h1>
+                            </div>
+
+                            <div className="grid grid-cols-1 gap-4 md:gap-8 ">
+                                {
+                                    Skills.map(skill => (
+                                        <div key={skill.id} className="flex flex-row justify-between items-center px-4 py-2 border-b-2 border-red-800">
+                                            <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
+                                            <div className='flex flex-row items-center'>
+                                                <div className='w-[100px] bg-slate-700/40 rounded-md'>
+                                                    <div className='bg-blue-500 h-[100%] rounded-md' ></div>
+                                                </div>
+                                                <span className='font-gochi'>{skill.level}</span>
+                                            </div>
+                                            <FaCheckDouble />
+                                        </div>
+                                    ))
+                                }
+
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#AAE5F5]/55 md:rotate-[12deg]">
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >Development Philosophy</h1>
                             </div>
 
                             <div className="flex flex-col">
-                                <p className="text-lg text-slate-500 text-justify font-serif">
+                                <p className="text-lg text-slate-500 text-justify font-gochi">
+                                    I believe in writing clean, maintainable code and continuously improving through feedback. Embracing Agile and DevOps principles, I focus on collaboration, automation, and bridging the gap between development and operations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#A9F4DB]/55 md:rotate-[10deg]">
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >Education & Certifications</h1>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <p className="text-lg text-slate-500 text-justify font-gochi">
                                     As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#A9F4DB] rotate-[10deg]">
+                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#C0D2F5]/55">
                             <div className='flex justify-center items-center w-full'>
-                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 5</h1>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >About Me 6</h1>
                             </div>
 
                             <div className="flex flex-col">
-                                <p className="text-lg text-slate-500 text-justify font-serif">
-                                    As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#C0D2F5]">
-                            <div className='flex justify-center items-center w-full'>
-                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 6</h1>
-                            </div>
-
-                            <div className="flex flex-col">
-                                <p className="text-lg text-slate-500 text-justify font-serif">
+                                <p className="text-lg text-slate-500 text-justify font-gochi">
                                     As a dynamic junior full stack developer, I have a proven track record of delivering high-quality, scalable and maintainable software solutions. I have a strong understanding of web technologies and I am passionate about learning new technologies and frameworks.
                                 </p>
                             </div>

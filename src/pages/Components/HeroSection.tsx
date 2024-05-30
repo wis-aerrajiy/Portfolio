@@ -18,7 +18,7 @@ const HeroSection = () => {
                 style={{ display: 'inline-block' }}
                 repeat={Infinity}
                 cursor={true}
-                className='md:text-4xl'
+                className='md:text-4xl font-gochi'
             />
         );
     };
@@ -34,12 +34,12 @@ const HeroSection = () => {
             <section id="hero ">
                 <div className="flex flex-col justify-center items-center  min-h-screen">
                     <div className="flex flex-col ">
-                        <h1 className="text-2xl md:text-8xl text-blue-900">
+                        <h1 className="text-2xl md:text-6xl text-blue-900 ">
                             Hi, I'm <span className="text-blue-900">Aiman Errajiy</span>
                         </h1>
 
                         <div className="">
-                            <span className="md:text-[2.5em] text-slate-500 mx-3 left-0">I'm a </span>
+                            <span className="md:text-[2.5em] text-slate-500 left-0 font-gochi">I'm a </span>
                             <InfosAnimation />
                         </div>
 

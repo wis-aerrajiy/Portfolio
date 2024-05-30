@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&family=Permanent+Marker&family=Signika:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&family=Permanent+Marker&family=Signika:wght@300..700&family=Solway:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Gochi+Hand&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&family=Permanent+Marker&family=Signika:wght@300..700&family=Solway:wght@300;400;500;700;800&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -48,10 +50,6 @@ html,
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    font-family: 'Indie Flower', cursive;
-    font-family: 'Give You Glory', cursive;
-    font-family: 'The Girl Next Door', cursive;
-    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .stickyNote.taped:after {
@@ -67,6 +65,12 @@ html,
     -webkit-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.font-gochi {
+    font-family: "Gochi Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* [
