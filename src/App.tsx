@@ -1,8 +1,6 @@
 import { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import background from './assets/9.jpg'
-
 import { Home } from './pages/Home'
 import About from './pages/About';
 import NavBar from './pages/NavBar';

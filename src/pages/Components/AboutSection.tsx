@@ -1,7 +1,7 @@
 import profile from '../../assets/profile.jpeg';
 import dabous from '../../assets/dabous.png';
 import '../../index.css';
-import { BreadCrumb } from './';
+// import { BreadCrumb } from './';
 
 import { FaGithub } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
@@ -9,7 +9,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Draggable from 'react-draggable';
-import { CSSTransition } from 'react-transition-group';
+// import { CSSTransition } from 'react-transition-group';
 
 const socials = [
     { id: 0, link: '', icon: FaGithub },
@@ -79,35 +79,35 @@ const AboutSection = () => {
                         className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[80vh]  rounded-lg  p-5 mx-5'
                     >
 
-                        <CSSTransition in={true} timeout={200} classNames="my-transition">
-                            <Draggable
+                        {/* <CSSTransition in={true} timeout={200} classNames="my-transition"> */}
+                        <Draggable
                             allowAnyClick={true}
                             bounds="parent"
                             disabled={true}
+                        >
+                            <div
+                                className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F4F39E]/25"
                             >
-                                <div
-                                    className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F4F39E]/25"
-                                >
-                                    <div className='flex justify-center items-center w-full'>
-                                        <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 1</h1>
-                                    </div>
-
-                                    <div className="flex flex-col gap-5">
-                                        <p className="text-lg text-slate-500 text-justify font-serif">
-                                            I am a 24-year-old software developer at 1337 Coding School and a passionate full-stack developer.
-                                            Specializing in Back-end development, database management, and Dev-Ops workflow.
-                                            I thrive on creative problem-solving. I am dedicated to crafting innovative digital solutions.
-                                        </p>
-                                        <p className="text-lg text-slate-500 text-justify font-serif">
-                                            I've got a solid grasp of computer science and software development from my studies.
-                                            I'm comfortable with several programming languages and have built web applications during my time at university.
-                                            Plus, I'm familiar with tools like Git, Docker, and Kubernetes, which I've used in projects and assignments.
-                                        </p>
-                                    </div>
+                                <div className='flex justify-center items-center w-full'>
+                                    <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg]' >About Me 1</h1>
                                 </div>
 
-                            </Draggable>
-                        </CSSTransition>
+                                <div className="flex flex-col gap-5">
+                                    <p className="text-lg text-slate-500 text-justify font-serif">
+                                        I am a 24-year-old software developer at 1337 Coding School and a passionate full-stack developer.
+                                        Specializing in Back-end development, database management, and Dev-Ops workflow.
+                                        I thrive on creative problem-solving. I am dedicated to crafting innovative digital solutions.
+                                    </p>
+                                    <p className="text-lg text-slate-500 text-justify font-serif">
+                                        I've got a solid grasp of computer science and software development from my studies.
+                                        I'm comfortable with several programming languages and have built web applications during my time at university.
+                                        Plus, I'm familiar with tools like Git, Docker, and Kubernetes, which I've used in projects and assignments.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </Draggable>
+                        {/* </CSSTransition> */}
 
                         <div className="flex flex-col stickyNote taped space-y-5">
                             <div className='flex justify-center items-center w-full'>
