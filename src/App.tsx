@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home'
 import About from './pages/About';
 import NavBar from './pages/NavBar';
-import CircularFloatingElement from './pages/test';
 
 
 class App extends Component {
@@ -23,7 +22,11 @@ class App extends Component {
                                 element={ <About /> }
                             />
                             <Route path="*"
-                                element={ <CircularFloatingElement numElements={5} rotationSpeed={0.2} /> }
+                                element={
+                                    <h1 className='text-center text-4xl text-red-500 mt-20'>
+                                        404 Not Found
+                                    </h1>
+                                }
                             />
                         </Routes>
                     </div>

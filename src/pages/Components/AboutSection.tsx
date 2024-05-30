@@ -3,29 +3,24 @@ import dabous from '../../assets/dabous.png';
 import '../../index.css';
 // import { BreadCrumb } from './';
 
-import { FaGithub } from "react-icons/fa";
-import { SiLinkedin } from "react-icons/si";
-import { FaTwitter } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+// import { FaGithub } from "react-icons/fa";
+// import { SiLinkedin } from "react-icons/si";
+// import { FaTwitter } from "react-icons/fa";
+// import { FaPhoneAlt } from "react-icons/fa";
+// import { MdEmail } from "react-icons/md";
 import Draggable from 'react-draggable';
 // import { CSSTransition } from 'react-transition-group';
 
-const socials = [
-    { id: 0, link: '', icon: FaGithub },
-    { id: 1, link: '', icon: SiLinkedin },
-    { id: 2, link: '', icon: FaTwitter },
-];
+// const socials = [
+//     { id: 0, link: '', icon: FaGithub },
+//     { id: 1, link: '', icon: SiLinkedin },
+//     { id: 2, link: '', icon: FaTwitter },
+// ];
 
-const PersonalInfo = [
-    { id: 0, icon: FaPhoneAlt, info: '+212 658506376' },
-    { id: 1, icon: MdEmail, info: 'aerrajiy.intra@gmail.com' },
-]
-
-// function alert the id of the clicked element
-function handleClick(element: any) {
-    console.log(element);
-}
+// const PersonalInfo = [
+//     { id: 0, icon: FaPhoneAlt, info: '+212 658506376' },
+//     { id: 1, icon: MdEmail, info: 'aerrajiy.intra@gmail.com' },
+// ]
 
 const AboutSection = () => {
     return (
