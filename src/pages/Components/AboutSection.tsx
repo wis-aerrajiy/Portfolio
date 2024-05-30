@@ -54,7 +54,6 @@ const SkillComponent = ({ skill }: SkillProps) => {
             <skill.icon />
         </div>
     );
-
 }
 
 const AboutSection = () => {
@@ -81,6 +80,12 @@ const AboutSection = () => {
                                 <p className="text-lg md:text-lg text-slate-500 ml-20 rotate-6 mt-2">
                                     Also Known As <span className="text-blue-900 underline-offset-8 underline px-3">Wis</span>
                                 </p>
+                            </div>
+
+                            <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
+                            <p className="text-lg text-slate-500 text-justify font-gochi">
+                                I believe that every problem can be solved with one more if 
+                            </p>
                             </div>
                         </div>
 
