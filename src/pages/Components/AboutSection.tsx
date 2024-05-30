@@ -1,4 +1,4 @@
-// import profile from '../../assets/profile.jpeg';
+import profile from '../../assets/profile.jpeg';
 import dabous from '../../assets/dabous.png';
 import '../../index.css';
 // import { BreadCrumb } from './';
@@ -26,12 +26,15 @@ const AboutSection = () => {
     return (
         <>
             <section id="about">
-                <div className='grid grid-cols-2 justify-center items-center min-h-screen space-y-20 md:space-y-0 lg:space-x-20 mt-24 lg:mt-0'>
+                <div className='flex flex-col lg:flex-row justify-center items-center min-h-screen space-y-5 md:space-y-0 lg:space-x-50 mt-24 lg:mt-0'>
 
-                    <div className='flex md:flex-col justify-start items-center h-[auto] md:h-[80vh] min-w-[auto] max-w-[90vw] ring-1 ring-gray-200 shadow-sm rounded-lg px-5 mx-5' >
-                        <div className='max-w-[70vw]'>
+                    <div className='flex md:flex-col justify-start items-center h-[auto] w-[90vw] lg:w-[auto] lg:h-[80vh] max-w-[90vw] ring-1 ring-gray-200 shadow-sm rounded-lg px-10 mx-1' >
+                        <div className='max-w-[90vw]'>
                             <div className='relative -z-1'>
-                                <img src="https://badge.mediaplus.ma/darkblue/aerrajiy" alt="profile" className='rounded-lg mt-10 w-[500px] h-[200px] md:h-[300px] object-cover rotate-[5deg] filter grayscale contrast-150 shadow-2xl' />
+                                <img
+                                    src="https://badge.mediaplus.ma/darkblue/aerrajiy"
+                                    alt="profile"
+                                    className='rounded-lg mt-10 w-[100%] object-cover rotate-[5deg] filter grayscale contrast-150 shadow-2xl' />
                                 <img src={dabous} alt="dabous" className='absolute -top-4 left-[40%] md:left-[45%] rounded-lg w-[50px] filter  contrast-150 ' />
                             </div>
 
