@@ -1,4 +1,4 @@
-import profile from '../../assets/profile.jpeg';
+// import profile from '../../assets/profile.jpeg';
 import dabous from '../../assets/dabous.png';
 import '../../index.css';
 // import { BreadCrumb } from './';
