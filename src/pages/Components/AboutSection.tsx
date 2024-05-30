@@ -1,4 +1,4 @@
-import profile from '../../assets/profile.jpeg';
+// import profile from '../../assets/profile.jpeg';
 import dabous from '../../assets/dabous.png';
 import '../../index.css';
 // import { BreadCrumb } from './';
@@ -26,7 +26,7 @@ const AboutSection = () => {
     return (
         <>
             <section id="about">
-                <div className='flex flex-col lg:flex-row justify-center items-center min-h-screen space-y-20 md:space-y-0 lg:space-x-20 mt-24 lg:mt-0'>
+                <div className='grid grid-cols-2 justify-center items-center min-h-screen space-y-20 md:space-y-0 lg:space-x-20 mt-24 lg:mt-0'>
 
                     <div className='flex md:flex-col justify-start items-center h-[auto] md:h-[80vh] min-w-[auto] max-w-[90vw] ring-1 ring-gray-200 shadow-sm rounded-lg px-5 mx-5' >
                         <div className='max-w-[70vw]'>
