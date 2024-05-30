@@ -24,13 +24,38 @@ const PersonalInfo = [
 ];
 
 const Skills = [
-    { "id": 0, "name": "HTML5", "level": "90%" },
-    { "id": 1, "name": "CSS3", "level": "85%" },
-    { "id": 2, "name": "JavaScript", "level": "80%" },
-    { "id": 3, "name": "React", "level": "75%" },
-    { "id": 4, "name": "Node.js", "level": "70%" },
-    { "id": 5, "name": "Express.js", "level": "70%" },
+    { "id": 0, "name": "HTML5", "level": "90%", "icon": FaCheckDouble },
+    { "id": 1, "name": "CSS3", "level": "85%", "icon": FaCheckDouble },
+    { "id": 2, "name": "JavaScript", "level": "80%", "icon": FaCheckDouble },
+    { "id": 3, "name": "React", "level": "75%", "icon": FaCheckDouble },
+    { "id": 4, "name": "Node.js", "level": "70%", "icon": FaCheckDouble },
+    { "id": 5, "name": "Express.js", "level": "70%", "icon": FaCheckDouble },
 ]
+
+interface SkillProps {
+    skill: {
+        id: number;
+        name: string;
+        level: string;
+        icon: any;
+    };
+}
+
+const SkillComponent = ({ skill }: SkillProps) => {
+    return (
+        <div className="flex flex-row justify-between items-center px-4 py-2 border-b-2 border-red-800">
+            <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
+            <div className='flex flex-row items-center'>
+                <div className='w-[100px] bg-slate-700/40 rounded-md'>
+                    <div className='bg-blue-500 h-[100%] rounded-md' ></div>
+                </div>
+                <span className='font-gochi'>{skill.level}</span>
+            </div>
+            <skill.icon />
+        </div>
+    );
+
+}
 
 const AboutSection = () => {
     return (
@@ -88,34 +113,6 @@ const AboutSection = () => {
 
                             </div>
                         </div>
-
-                        {/* <div className='mx-5'>
-                            <div className="stickyNote bg-[#A9F4DB]/40 mx-5">
-
-                            </div>
-                        </div> */}
-                        {/* <div className=''>
-                            <ul className='flex justify-between items-center space-x-20 mt-10'>
-                                {
-                                    socials.map(item => (
-                                        <li key={item.id} className='p-4 rounded-lg flex items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2'> <item.icon /> </li>
-                                    ))
-                                }
-                            </ul>
-                        </div> */}
-
-                        {/* <div className=' mt-10 max-w-[100%]'>
-                            <ul className='flex flex-col justify-between items-center gap-5'>
-                                {
-                                    PersonalInfo.map(item => (
-                                        <li key={item.id} className='m-5 w-full p-4 rounded-lg flex flex-row items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2'>
-                                            <item.icon className='mx-3' />
-                                            <span>{item.info}</span>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
-                        </div> */}
                     </div>
 
                     <div
@@ -173,16 +170,7 @@ const AboutSection = () => {
                             <div className="grid grid-cols-1 gap-4 md:gap-8 ">
                                 {
                                     Skills.map(skill => (
-                                        <div key={skill.id} className="flex flex-row justify-between items-center px-4 py-2 border-b-2 border-red-800">
-                                            <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
-                                            <div className='flex flex-row items-center'>
-                                                <div className='w-[100px] bg-slate-700/40 rounded-md'>
-                                                    <div className='bg-blue-500 h-[100%] rounded-md' ></div>
-                                                </div>
-                                                <span className='font-gochi'>{skill.level}</span>
-                                            </div>
-                                            <FaCheckDouble />
-                                        </div>
+                                        <SkillComponent key={skill.id} skill={skill} />
                                     ))
                                 }
 
