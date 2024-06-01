@@ -92,11 +92,11 @@ const SkillComponent = ({ skill }: SkillProps) => {
                 className={`absolute left-11 top-1.5 noise min-h-[80%] -z-20 rounded-full`}
                 style={{ width: skill.level }}
             ></div>
-            <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
+            <skill.icon className='text-4xl p-2 rounded-lg border border-gray-300' />
+            <div className='flex flex-col items-start font-gochi text-2xl text-[#1E3A8A] ring-offset-opacity-50 bg-[#EAF9D0] px-2'>
+                <span className='font-gochi text-x'>{skill.name}</span>
+            </div>
             <div className='flex flex-row items-center'>
-                <div className='w-[100px] bg-slate-700/40 rounded-md'>
-                    <div className='bg-blue-500 h-[100%] rounded-md' ></div>
-                </div>
                 <span
                     className='font-gochi text-2xl text-slate-700 ring-offset-opacity-50'
 
