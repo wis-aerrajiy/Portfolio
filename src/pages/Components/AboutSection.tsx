@@ -9,7 +9,9 @@ import { FaTwitter } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { RxDownload } from "react-icons/rx";
-import { FaCheckDouble } from "react-icons/fa6";
+// import { FaCheckDouble } from "react-icons/fa6";
+import { ImCheckmark } from "react-icons/im";
+
 import Draggable from 'react-draggable';
 
 // import React from 'react';
@@ -66,12 +68,12 @@ const PersonalInfo = [
 ];
 
 const Skills = [
-    { "id": 0, "name": "HTML5", "level": "90%", "icon": FaCheckDouble },
-    { "id": 1, "name": "CSS3", "level": "85%", "icon": FaCheckDouble },
-    { "id": 2, "name": "JavaScript", "level": "80%", "icon": FaCheckDouble },
-    { "id": 3, "name": "React", "level": "75%", "icon": FaCheckDouble },
-    { "id": 4, "name": "Node.js", "level": "70%", "icon": FaCheckDouble },
-    { "id": 5, "name": "Express.js", "level": "70%", "icon": FaCheckDouble },
+    { "id": 0, "name": "HTML5", "level": "90%", "icon": ImCheckmark },
+    { "id": 1, "name": "CSS3", "level": "85%", "icon": ImCheckmark },
+    { "id": 2, "name": "JavaScript", "level": "80%", "icon": ImCheckmark },
+    { "id": 3, "name": "React", "level": "75%", "icon": ImCheckmark },
+    { "id": 4, "name": "Node.js", "level": "70%", "icon": ImCheckmark },
+    { "id": 5, "name": "Express.js", "level": "70%", "icon": ImCheckmark },
 ]
 
 interface SkillProps {
@@ -87,7 +89,7 @@ const SkillComponent = ({ skill }: SkillProps) => {
     return (
         <div className="relative flex flex-row justify-between items-center px-4 py-2 border-b-2 border-red-800">
             <div
-                className={`absolute left-10 top-1.5 noise min-h-[80%] -z-20 rounded-full`}
+                className={`absolute left-11 top-1.5 noise min-h-[80%] -z-20 rounded-full`}
                 style={{ width: skill.level }}
             ></div>
             <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
@@ -100,7 +102,7 @@ const SkillComponent = ({ skill }: SkillProps) => {
 
                 >{skill.level}</span>
             </div>
-            <skill.icon />
+            {/* <skill.icon /> */}
         </div>
     );
 }
@@ -221,7 +223,7 @@ const AboutSection = () => {
                                 </div>
                             </Draggable>
 
-                            <div className="grid grid-cols-1 gap-4 md:gap-8 ">
+                            <div className="grid grid-cols-1 gap-3 md:gap-7 ">
                                 {
                                     Skills.map(skill => (
                                         <SkillComponent key={skill.id} skill={skill} />
@@ -242,20 +244,7 @@ const AboutSection = () => {
                             <div className="grid grid-cols-1 gap-3 md:gap-7 ">
                                 {
                                     Skills.map(skill => (
-                                        <div key={skill.id} className="relative flex flex-row justify-between items-center px-4 py-3  border-red-800">
-                                            <div
-                                                className={`absolute left-0 top-1.5 noise min-h-[80%] -z-20 rounded-full`}
-                                                style={{ width: skill.level }}
-                                            ></div>
-                                            <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
-                                            <div className='flex flex-row items-center'>
-                                                <div className='w-[100px] bg-slate-700/40 rounded-md'>
-                                                    <div className='bg-blue-500 h-[100%] rounded-md' ></div>
-                                                </div>
-                                                <span className='font-gochi'>{skill.level}</span>
-                                            </div>
-                                            <FaCheckDouble />
-                                        </div>
+                                        <SkillComponent key={skill.id} skill={skill} />
                                     ))
                                 }
                             </div>
