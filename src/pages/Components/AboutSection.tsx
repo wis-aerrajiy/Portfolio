@@ -12,48 +12,48 @@ import { RxDownload } from "react-icons/rx";
 import { FaCheckDouble } from "react-icons/fa6";
 import Draggable from 'react-draggable';
 
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+// import React from 'react';
+// import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
-const data = [
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-    },
-];
+// const data = [
+//     {
+//         name: 'Page A',
+//         uv: 4000,
+//         pv: 2400,
+//         amt: 2400,
+//     },
+//     {
+//         name: 'Page B',
+//         uv: 3000,
+//         pv: 1398,
+//         amt: 2210,
+//     },
+// ];
 
-const HorizontalBarChart = () => {
-    return (
-        <ResponsiveContainer width="100%" height={400}>
-            <BarChart
-                layout="vertical"
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                    top: 5, right: 30, left: 20, bottom: 5,
-                }}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis type="number" />
-                <YAxis type="category" dataKey="name" />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="pv" fill="#8884d8" />
-                <Bar dataKey="uv" fill="#82ca9d" />
-            </BarChart>
-        </ResponsiveContainer>
-    );
-}
+// const HorizontalBarChart = () => {
+//     return (
+//         <ResponsiveContainer width="100%" height={400}>
+//             <BarChart
+//                 layout="vertical"
+//                 width={500}
+//                 height={300}
+//                 data={data}
+//                 margin={{
+//                     top: 5, right: 30, left: 20, bottom: 5,
+//                 }}
+//             >
+//                 <CartesianGrid strokeDasharray="3 3" />
+//                 <XAxis type="number" />
+//                 <YAxis type="category" dataKey="name" />
+//                 <Tooltip />
+//                 <Legend />
+//                 <Bar dataKey="pv" fill="#8884d8" />
+//                 <Bar dataKey="uv" fill="#82ca9d" />
+//             </BarChart>
+//         </ResponsiveContainer>
+//     );
+// }
 
 const socials = [
     { id: 0, link: '', icon: FaGithub },
