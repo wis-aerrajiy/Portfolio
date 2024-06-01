@@ -74,9 +74,8 @@ html,
 }
 
 .noise {
-    z-index: -40;
   background: 
-    linear-gradient(to right, blue, transparent), 
+    linear-gradient(to right, blue 80%, transparent), 
     url(https://grainy-gradients.vercel.app/noise.svg) repeat;  
     background-blend-mode: overlay;
     background-size: 100% 100%;
