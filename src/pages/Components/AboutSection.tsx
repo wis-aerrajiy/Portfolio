@@ -233,12 +233,12 @@ const AboutSection = () => {
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >My Skilles</h1>
                             </div>
 
-                            <div className="grid grid-cols-1 gap-4 md:gap-8 ">
+                            <div className="grid grid-cols-1 gap-3 md:gap-7 ">
                                 {
                                     Skills.map(skill => (
                                         <div key={skill.id} className="relative flex flex-row justify-between items-center px-4 py-3  border-red-800">
                                             <div
-                                                className={`absolute left-0 top-0 noise min-h-[100%] -z-20 rounded-full`}
+                                                className={`absolute left-0 top-1.5 noise min-h-[80%] -z-20 rounded-full`}
                                                 style={{ width: skill.level }}
                                             ></div>
                                             <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
