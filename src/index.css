@@ -74,13 +74,16 @@ html,
 }
 
 .noise {
-  background: 
-    linear-gradient(to right, blue 80%, transparent), 
-    url(https://grainy-gradients.vercel.app/noise.svg) repeat;  
+    background:
+        /* linear-gradient(to right, blue 80%, transparent), */
+        url(/line.png) repeat;
     background-blend-mode: overlay;
+    opacity: 0.5;
     background-size: 100% 100%;
+    object-fit: cover;
 
-  filter: contrast(170%) brightness(1000%);  
+    filter: contrast(170%) brightness(1000%);
+    z-index: -40;
 }
 
 /* [

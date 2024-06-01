@@ -15,7 +15,6 @@ import Draggable from 'react-draggable';
 // import React from 'react';
 // import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-
 // const data = [
 //     {
 //         name: 'Page A',
@@ -86,13 +85,20 @@ interface SkillProps {
 
 const SkillComponent = ({ skill }: SkillProps) => {
     return (
-        <div className="flex flex-row justify-between items-center px-4 py-2 border-b-2 border-red-800">
+        <div className="relative flex flex-row justify-between items-center px-4 py-2 border-b-2 border-red-800">
+            <div
+                className={`absolute left-10 top-1.5 noise min-h-[80%] -z-20 rounded-full`}
+                style={{ width: skill.level }}
+            ></div>
             <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
             <div className='flex flex-row items-center'>
                 <div className='w-[100px] bg-slate-700/40 rounded-md'>
                     <div className='bg-blue-500 h-[100%] rounded-md' ></div>
                 </div>
-                <span className='font-gochi text-2xl'>{skill.level}</span>
+                <span
+                    className='font-gochi text-2xl text-slate-700 ring-offset-opacity-50'
+
+                >{skill.level}</span>
             </div>
             <skill.icon />
         </div>
@@ -252,7 +258,6 @@ const AboutSection = () => {
                                         </div>
                                     ))
                                 }
-
                             </div>
                         </div>
 
