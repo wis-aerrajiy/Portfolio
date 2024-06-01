@@ -12,6 +12,49 @@ import { RxDownload } from "react-icons/rx";
 import { FaCheckDouble } from "react-icons/fa6";
 import Draggable from 'react-draggable';
 
+import React from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
+
+const data = [
+    {
+        name: 'Page A',
+        uv: 4000,
+        pv: 2400,
+        amt: 2400,
+    },
+    {
+        name: 'Page B',
+        uv: 3000,
+        pv: 1398,
+        amt: 2210,
+    },
+];
+
+const HorizontalBarChart = () => {
+    return (
+        <ResponsiveContainer width="100%" height={400}>
+            <BarChart
+                layout="vertical"
+                width={500}
+                height={300}
+                data={data}
+                margin={{
+                    top: 5, right: 30, left: 20, bottom: 5,
+                }}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" />
+                <YAxis type="category" dataKey="name" />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="pv" fill="#8884d8" />
+                <Bar dataKey="uv" fill="#82ca9d" />
+            </BarChart>
+        </ResponsiveContainer>
+    );
+}
+
 const socials = [
     { id: 0, link: '', icon: FaGithub },
     { id: 1, link: '', icon: SiLinkedin },
@@ -83,9 +126,9 @@ const AboutSection = () => {
                             </div>
 
                             <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
-                            <p className="text-lg text-slate-500 text-justify font-gochi">
-                                I believe that every problem can be solved with one more if 
-                            </p>
+                                <p className="text-lg text-slate-500 text-justify font-gochi">
+                                    I believe that every problem can be solved with one more if
+                                </p>
                             </div>
                         </div>
 
@@ -193,7 +236,11 @@ const AboutSection = () => {
                             <div className="grid grid-cols-1 gap-4 md:gap-8 ">
                                 {
                                     Skills.map(skill => (
-                                        <div key={skill.id} className="flex flex-row justify-between items-center px-4 py-2 border-b-2 border-red-800">
+                                        <div key={skill.id} className="relative flex flex-row justify-between items-center px-4 py-3  border-red-800">
+                                            <div
+                                                className={`absolute left-0 top-0 noise min-h-[100%] -z-20 rounded-full`}
+                                                style={{ width: skill.level }}
+                                            ></div>
                                             <SiLinkedin className='text-4xl p-2 rounded-lg border border-gray-300' />
                                             <div className='flex flex-row items-center'>
                                                 <div className='w-[100px] bg-slate-700/40 rounded-md'>

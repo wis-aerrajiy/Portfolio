@@ -73,6 +73,17 @@ html,
     font-style: normal;
 }
 
+.noise {
+    z-index: -40;
+  background: 
+    linear-gradient(to right, blue, transparent), 
+    url(https://grainy-gradients.vercel.app/noise.svg) repeat;  
+    background-blend-mode: overlay;
+    background-size: 100% 100%;
+
+  filter: contrast(170%) brightness(1000%);  
+}
+
 /* [
     {
        files {} 
