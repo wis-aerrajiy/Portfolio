@@ -49,7 +49,7 @@ const SkillComponent = ({ skill }: SkillProps) => {
                 <div className='w-[100px] bg-slate-700/40 rounded-md'>
                     <div className='bg-blue-500 h-[100%] rounded-md' ></div>
                 </div>
-                <span className='font-gochi'>{skill.level}</span>
+                <span className='font-gochi text-2xl'>{skill.level}</span>
             </div>
             <skill.icon />
         </div>
