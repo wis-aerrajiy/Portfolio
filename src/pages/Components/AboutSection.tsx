@@ -312,7 +312,7 @@ const AboutSection = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#C0D2F5]/55 col-start-1 col-span-2 row-span-2">
+                        <div className="flex flex-col stickyNote taped space-y-5 bg-[#C0D2F5]/55 md:col-start-1 md:col-span-2 md:row-span-2">
                             <div className='flex justify-center items-center w-full'>
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >Random Quote</h1>
                             </div>
