@@ -1,9 +1,7 @@
-// import profile from '../../assets/profile.jpeg';
-import dabous from '../../assets/dabous.png';
-import '../../index.css';
-
-import * as Icons from './Icons'
 import React from 'react';
+import * as Icons from './Icons'
+import '../../index.css';
+import dabous from '../../assets/dabous.png';
 
 const socials = [
     { id: 0, link: '', icon: Icons.FaGithub },
@@ -16,33 +14,31 @@ const PersonalInfo = [
     { id: 1, icon: Icons.MdEmail, info: 'aerrajiy.intra@gmail.com' },
 ];
 
-
-// hard coded skills
 const TechnicalSkills = [
-    { id: 0, name: 'WebDev', level: '80%', icon: Icons.PiDevToLogoFill },
-    { id: 1, name: 'TypeScript', level: '80%',  icon: Icons.SiTypescript },
-    { id: 2, name: 'JavaScript', level: '80%',  icon: Icons.IoLogoJavascript },
-    { id: 3, name: 'C++', level: '80%',         icon: Icons.TbBrandCpp },
-    { id: 4, name: 'Python', level: '70%',      icon: Icons.FaPython },
-    { id: 5, name: 'React', level: '80%',       icon: Icons.FaReact },
-    { id: 6, name: 'Node.js', level: '80%',     icon: Icons.FaNodeJs },
-    { id: 7, name: 'Nest.js', level: '70%',     icon: Icons.SiNestjs },
+    { id: 0, name: 'Web Dev', level: '80%', icon: Icons.PiDevToLogoFill },
+    { id: 1, name: 'TypeScript', level: '80%', icon: Icons.SiTypescript },
+    { id: 2, name: 'JavaScript', level: '80%', icon: Icons.IoLogoJavascript },
+    { id: 3, name: 'C++', level: '80%', icon: Icons.TbBrandCpp },
+    { id: 4, name: 'Python', level: '70%', icon: Icons.FaPython },
+    { id: 5, name: 'React', level: '80%', icon: Icons.FaReact },
+    { id: 6, name: 'Node.js', level: '80%', icon: Icons.FaNodeJs },
+    { id: 7, name: 'Nest.js', level: '70%', icon: Icons.SiNestjs },
     { id: 8, name: 'TailwindCSS', level: '80%', icon: Icons.RiTailwindCssFill },
-    { id: 9, name: 'MongoDB', level: '80%',     icon: Icons.SiMongodb },
+    { id: 9, name: 'MongoDB', level: '80%', icon: Icons.SiMongodb },
     { id: 10, name: 'PostgreSQL', level: '70%', icon: Icons.BiLogoPostgresql },
 ];
 
 const OtherSkills = [
-    { id: 0, name: 'Docker', level: '80%',      icon: Icons.FaDocker },
-    { id: 1, name: 'VC Git', level: '80%',      icon: Icons.FaGitAlt },
-    { id: 2, name: 'Socket.io', level: '80%',   icon: Icons.SiSocketdotio },
-    { id: 3, name: 'DevOps', level: '80%',      icon: Icons.SiAzuredevops },
+    { id: 0, name: 'Docker', level: '80%', icon: Icons.FaDocker },
+    { id: 1, name: 'VC Git', level: '80%', icon: Icons.FaGitAlt },
+    { id: 2, name: 'Socket.io', level: '80%', icon: Icons.SiSocketdotio },
+    { id: 3, name: 'DevOps', level: '80%', icon: Icons.SiAzuredevops },
     { id: 4, name: 'Problem Solving', level: '80%', icon: Icons.ImCheckmark },
-    { id: 5, name: 'Teamwork', level: '80%',        icon: Icons.ImCheckmark },
-    { id: 6, name: 'Communication', level: '80%',   icon: Icons.ImCheckmark },
+    { id: 5, name: 'Teamwork', level: '80%', icon: Icons.ImCheckmark },
+    { id: 6, name: 'Communication', level: '80%', icon: Icons.ImCheckmark },
     { id: 7, name: 'Time Management', level: '80%', icon: Icons.ImCheckmark },
-    { id: 8, name: 'Leadership', level: '80%',      icon: Icons.ImCheckmark },
-    { id: 9, name: 'Creativity', level: '80%',      icon: Icons.ImCheckmark },
+    { id: 8, name: 'Leadership', level: '80%', icon: Icons.ImCheckmark },
+    { id: 9, name: 'Creativity', level: '80%', icon: Icons.ImCheckmark },
 ];
 
 const Certificates = [
@@ -77,21 +73,21 @@ interface SkillProps {
 
 const SkillComponent = ({ skill }: SkillProps) => {
     return (
-        <div className="relative flex flex-row justify-between items-center px-4 py-1">
-            <div
+        <div className="relative flex flex-row justify-center items-center px-4 py-1 !bg-[#EAF9D0] border border-red-600 rounded-lg rounded-tl-md hover:scale-105 transition-all duration-500">
+            {/* <div
                 className={`absolute left-11 top-1.5 noise min-h-[80%] -z-20 rounded-full`}
                 style={{ width: skill.level }}
-            ></div>
-            <skill.icon className='text-4xl p-2 rounded-lg border border-gray-300' />
-            <div className='flex flex-col items-start font-gochi text-2xl text-slate-700 ring-offset-opacity-50 bg-[#EAF9D0] px-1'>
+            ></div> */}
+            {/* <skill.icon className='text-4xl p-2 rounded-lg border border-gray-300' /> */}
+            <div className='flex flex-col items-start font-gochi text-2xl text-slate-700 ring-offset-opacity-50 px-1'>
                 <span className='font-gochi md:text-xl text-sm !font-bold'>{skill.name}</span>
             </div>
-            <div className='flex flex-row items-center'>
+            {/* <div className='flex flex-row items-center'>
                 <span
                     className='font-gochi text-2xl text-slate-700 ring-offset-opacity-50'
 
                 >{skill.level}</span>
-            </div>
+            </div> */}
             {/* <skill.icon /> */}
         </div>
     );
@@ -177,36 +173,36 @@ const AboutSection = () => {
                     >
 
                         {/* <Draggable disabled={true} > */}
-                            <div
-                                className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F6EDA9]/55 md:!rotate-[-3deg]"
-                            >
-                                <div className='flex justify-center items-center w-full'>
-                                    <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >Who Am I ?</h1>
-                                </div>
-
-                                <div className="flex flex-col gap-5">
-                                    <p className="text-lg text-slate-500 text-justify font-gochi">
-                                        I am a 24-year-old software developer at 1337 Coding School and a passionate full-stack developer.
-                                        Specializing in Back-end development, database management, and Dev-Ops workflow.
-                                        I thrive on creative problem-solving. I am dedicated to crafting innovative digital solutions.
-                                    </p>
-
-                                    <ul className='flex flex-col gap-3'>
-                                        <li className='flex flex-row items-center gap-2'>
-                                            <Icons.ImCheckmark className='text-2xl text-black/45' />
-                                            <span className='text-lg text-slate-500 font-gochi'>Highly motivated and eager to learn new technologies.</span>
-                                        </li>
-                                        <li className='flex flex-row items-center gap-2'>
-                                            <Icons.ImCheckmark className='text-2xl text-black/45' />
-                                            <span className='text-lg text-slate-500 font-gochi'>Strong problem-solving skills and a passion for software development.</span>
-                                        </li>
-                                        <li className='flex flex-row items-center gap-2'>
-                                            <Icons.ImCheckmark className='text-2xl text-black/45' />
-                                            <span className='text-lg text-slate-500 font-gochi'>Excellent communication and teamwork skills.</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div
+                            className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F6EDA9]/55 md:!rotate-[-3deg]"
+                        >
+                            <div className='flex justify-center items-center w-full'>
+                                <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >Who Am I ?</h1>
                             </div>
+
+                            <div className="flex flex-col gap-5">
+                                <p className="text-lg text-slate-500 text-justify font-gochi">
+                                    I am a 24-year-old software developer at 1337 Coding School and a passionate full-stack developer.
+                                    Specializing in Back-end development, database management, and Dev-Ops workflow.
+                                    I thrive on creative problem-solving. I am dedicated to crafting innovative digital solutions.
+                                </p>
+
+                                <ul className='flex flex-col gap-3'>
+                                    <li className='flex flex-row items-center gap-2'>
+                                        <Icons.ImCheckmark className='text-2xl text-black/45' />
+                                        <span className='text-lg text-slate-500 font-gochi'>Highly motivated and eager to learn new technologies.</span>
+                                    </li>
+                                    <li className='flex flex-row items-center gap-2'>
+                                        <Icons.ImCheckmark className='text-2xl text-black/45' />
+                                        <span className='text-lg text-slate-500 font-gochi'>Strong problem-solving skills and a passion for software development.</span>
+                                    </li>
+                                    <li className='flex flex-row items-center gap-2'>
+                                        <Icons.ImCheckmark className='text-2xl text-black/45' />
+                                        <span className='text-lg text-slate-500 font-gochi'>Excellent communication and teamwork skills.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
                         {/* </Draggable> */}
 
@@ -225,19 +221,19 @@ const AboutSection = () => {
                         <div
                             className="
                             md:col-start-1 md:col-span-1 md:row-start-2 md:row-span-1
-                            flex flex-col stickyNote taped space-y-3 bg-[#D9F5AA]/55 md:rotate-[3deg]"
+                            flex flex-col stickyNote taped bg-[#D9F5AA]/55 md:rotate-[3deg]"
                         >
                             <div className='flex justify-center items-center w-full'>
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >My Skilles</h1>
                             </div>
 
                             {/* <Draggable> */}
-                                <div className='flex flex-row gap-5 justify-center items-center bg-slate-700/40 mx-auto px-6 py-3 rounded-md'>
-                                    <Icons.RxDownload /> Download Resume
-                                </div>
+                            <div className='flex flex-row justify-center items-center bg-slate-700/40 mx-auto px-6 py-3 rounded-md m-4'>
+                                <Icons.RxDownload /> Download Resume
+                            </div>
                             {/* </Draggable> */}
 
-                            <div className="grid grid-cols-1 gap-1 md:gap-2 ">
+                            <div className="grid grid-cols-2 gap-2 md:gap-4">
                                 {
                                     TechnicalSkills.map(skill => (
                                         <SkillComponent key={skill.id} skill={skill} />
@@ -249,13 +245,13 @@ const AboutSection = () => {
 
                         <div
                             className="
-                            flex flex-col stickyNote taped space-y-1 bg-[#D9F5AA]/55 md:rotate-[3deg]"
+                            flex flex-col stickyNote taped bg-[#D9F5AA]/55 md:rotate-[3deg]"
                         >
-                            <div className='flex justify-center items-center w-full'>
+                            <div className='flex justify-center items-center w-full my-4'>
                                 <h1 className='underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi' >My Skilles</h1>
                             </div>
 
-                            <div className="grid grid-cols-1 gap-3 md:gap-5 ">
+                            <div className="grid grid-cols-2 gap-2 md:gap-4">
                                 {
                                     OtherSkills.map(skill => (
                                         <SkillComponent key={skill.id} skill={skill} />
@@ -286,8 +282,6 @@ const AboutSection = () => {
                                     A digital technology architect with a passion for software development at 1337 Coding School.
                                     <br />
                                     <span className='font-bold text-slate-500'>Certifications:</span>
-
-
                                 </p>
 
                                 <ul className='flex flex-col gap-3'>
@@ -325,6 +319,12 @@ const AboutSection = () => {
                         </div>
 
                     </div>
+                    <svg className='fixed top-0'>
+                        <filter id="wavy2">
+                            <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+                            <feDisplacementMap in="SourceGraphic" scale="20" />
+                        </filter>
+                    </svg>
                 </div>
             </section>
         </>
