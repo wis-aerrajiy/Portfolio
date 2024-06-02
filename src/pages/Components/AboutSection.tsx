@@ -73,22 +73,12 @@ interface SkillProps {
 
 const SkillComponent = ({ skill }: SkillProps) => {
     return (
-        <div className="relative flex flex-row justify-center items-center px-4 py-1 !bg-[#EAF9D0] border border-red-600 rounded-lg rounded-tl-md hover:scale-105 transition-all duration-500">
-            {/* <div
-                className={`absolute left-11 top-1.5 noise min-h-[80%] -z-20 rounded-full`}
-                style={{ width: skill.level }}
-            ></div> */}
-            {/* <skill.icon className='text-4xl p-2 rounded-lg border border-gray-300' /> */}
-            <div className='flex flex-col items-start font-gochi text-2xl text-slate-700 ring-offset-opacity-50 px-1'>
+        <div className="relative flex flex-row justify-between items-center px-4 py-1 !bg-[#EAF9D0] border border-red-600 rounded-lg rounded-tl-md hover:scale-105 transition-all duration-500">
+            <skill.icon className='text-4xl p-2 rounded-lg border border-gray-300' />
+
+            <div className='flex justify-center items-start font-gochi text-2xl text-slate-700 ring-offset-opacity-50 px-1'>
                 <span className='font-gochi md:text-xl text-sm !font-bold'>{skill.name}</span>
             </div>
-            {/* <div className='flex flex-row items-center'>
-                <span
-                    className='font-gochi text-2xl text-slate-700 ring-offset-opacity-50'
-
-                >{skill.level}</span>
-            </div> */}
-            {/* <skill.icon /> */}
         </div>
     );
 }
@@ -169,7 +159,7 @@ const AboutSection = () => {
                     </div>
 
                     <div
-                        className='relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[90vh]  rounded-lg  p-5 mx-5'
+                        className='shadow-sm relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[90vh]  rounded-lg  p-5 mx-5'
                     >
 
                         {/* <Draggable disabled={true} > */}
@@ -228,8 +218,10 @@ const AboutSection = () => {
                             </div>
 
                             {/* <Draggable> */}
-                            <div className='flex flex-row justify-center items-center bg-slate-700/40 mx-auto px-6 py-3 rounded-md m-4'>
-                                <Icons.RxDownload /> Download Resume
+                            <div
+                                className='flex flex-row justify-center items-center bg-slate-700/40 mx-auto px-6 py-3 rounded-md m-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-500'
+                            >
+                                <Icons.RxDownload className='mx-3'/> Download Resume
                             </div>
                             {/* </Draggable> */}
 
