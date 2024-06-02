@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home'
 import About from './pages/About';
 import NavBar from './pages/NavBar';
+import Projects from './pages/Projects';
 
 
 class App extends Component {
@@ -20,6 +21,9 @@ class App extends Component {
                             />
                             <Route path="/about"
                                 element={ <About /> }
+                            />
+                            <Route path="/projects"
+                                element={ <Projects /> }
                             />
                             <Route path="*"
                                 element={
