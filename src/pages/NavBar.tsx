@@ -112,7 +112,7 @@ const Navbar = () => {
                 <ul
                     className={
                         nav
-                            ? 'fixed md:hidden rounded-sm left-0 top-[0] w-full h-screen border-r border-r-gray-900 bg-blue-400/0 ease-in-out duration-500 z-40 navDropdown '
+                            ? 'fixed md:hidden rounded-sm left-0 top-[0] w-full h-screen border-r border-r-gray-900 bg-blue-400/0 ease-in-out duration-500 z-40 navDropdown !bg-none'
                             : 'ease-in-out duration-500  left-0 fixed w-full top-[-100%]'
                     }
                 >
