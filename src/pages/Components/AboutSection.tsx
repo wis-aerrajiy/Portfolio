@@ -1,122 +1,49 @@
 // import profile from '../../assets/profile.jpeg';
 import dabous from '../../assets/dabous.png';
 import '../../index.css';
-// import { BreadCrumb } from './';
 
-import { FaGithub } from "react-icons/fa";
-import { SiLinkedin } from "react-icons/si";
-import { FaTwitter } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { RxDownload } from "react-icons/rx";
-// import { FaCheckDouble } from "react-icons/fa6";
-import { ImCheckmark } from "react-icons/im";
-
-import Draggable from 'react-draggable';
-
+import * as Icons from './Icons'
 import React from 'react';
-// import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
-// const data = [
-//     {
-//         name: 'Page A',
-//         uv: 4000,
-//         pv: 2400,
-//         amt: 2400,
-//     },
-//     {
-//         name: 'Page B',
-//         uv: 3000,
-//         pv: 1398,
-//         amt: 2210,
-//     },
-// ];
-
-// const HorizontalBarChart = () => {
-//     return (
-//         <ResponsiveContainer width="100%" height={400}>
-//             <BarChart
-//                 layout="vertical"
-//                 width={500}
-//                 height={300}
-//                 data={data}
-//                 margin={{
-//                     top: 5, right: 30, left: 20, bottom: 5,
-//                 }}
-//             >
-//                 <CartesianGrid strokeDasharray="3 3" />
-//                 <XAxis type="number" />
-//                 <YAxis type="category" dataKey="name" />
-//                 <Tooltip />
-//                 <Legend />
-//                 <Bar dataKey="pv" fill="#8884d8" />
-//                 <Bar dataKey="uv" fill="#82ca9d" />
-//             </BarChart>
-//         </ResponsiveContainer>
-//     );
-// }
-
-/* Skills Icons */
-import { SiTypescript } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaPython } from "react-icons/fa";
-import { TbBrandCpp } from "react-icons/tb";
-import { FaReact } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { SiNestjs } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { PiDevToLogoFill } from "react-icons/pi";
-
-/* Skills Icons */
-import { FaDocker } from "react-icons/fa";
-import { FaGitAlt } from "react-icons/fa";
-import { SiSocketdotio } from "react-icons/si";
-import { SiAzuredevops } from "react-icons/si";
 
 const socials = [
-    { id: 0, link: '', icon: FaGithub },
-    { id: 1, link: '', icon: SiLinkedin },
-    { id: 2, link: '', icon: FaTwitter },
+    { id: 0, link: '', icon: Icons.FaGithub },
+    { id: 1, link: '', icon: Icons.SiLinkedin },
+    { id: 2, link: '', icon: Icons.FaTwitter },
 ];
 
 const PersonalInfo = [
-    { id: 0, icon: FaPhoneAlt, info: '+212 658506376' },
-    { id: 1, icon: MdEmail, info: 'aerrajiy.intra@gmail.com' },
+    { id: 0, icon: Icons.FaPhoneAlt, info: '+212 658506376' },
+    { id: 1, icon: Icons.MdEmail, info: 'aerrajiy.intra@gmail.com' },
 ];
 
 
 // hard coded skills
 const TechnicalSkills = [
-    { id: 0, name: 'WebDev', level: '80%', icon: PiDevToLogoFill },
-    { id: 1, name: 'TypeScript', level: '80%', icon: SiTypescript },
-    { id: 2, name: 'JavaScript', level: '80%', icon: IoLogoJavascript },
-    { id: 3, name: 'C++', level: '80%', icon: TbBrandCpp },
-    { id: 4, name: 'Python', level: '70%', icon: FaPython },
-    { id: 5, name: 'React', level: '80%', icon: FaReact },
-    { id: 6, name: 'Node.js', level: '80%', icon: FaNodeJs },
-    { id: 7, name: 'Nest.js', level: '70%', icon: SiNestjs },
-    { id: 8, name: 'TailwindCSS', level: '80%', icon: RiTailwindCssFill },
-    { id: 9, name: 'MongoDB', level: '80%', icon: SiMongodb },
-    { id: 10, name: 'PostgreSQL', level: '70%', icon: BiLogoPostgresql },
+    { id: 0, name: 'WebDev', level: '80%', icon: Icons.PiDevToLogoFill },
+    { id: 1, name: 'TypeScript', level: '80%',  icon: Icons.SiTypescript },
+    { id: 2, name: 'JavaScript', level: '80%',  icon: Icons.IoLogoJavascript },
+    { id: 3, name: 'C++', level: '80%',         icon: Icons.TbBrandCpp },
+    { id: 4, name: 'Python', level: '70%',      icon: Icons.FaPython },
+    { id: 5, name: 'React', level: '80%',       icon: Icons.FaReact },
+    { id: 6, name: 'Node.js', level: '80%',     icon: Icons.FaNodeJs },
+    { id: 7, name: 'Nest.js', level: '70%',     icon: Icons.SiNestjs },
+    { id: 8, name: 'TailwindCSS', level: '80%', icon: Icons.RiTailwindCssFill },
+    { id: 9, name: 'MongoDB', level: '80%',     icon: Icons.SiMongodb },
+    { id: 10, name: 'PostgreSQL', level: '70%', icon: Icons.BiLogoPostgresql },
 ];
 
 const OtherSkills = [
-    { id: 0, name: 'Docker', level: '80%', icon: FaDocker },
-    { id: 1, name: 'VC Git', level: '80%', icon: FaGitAlt },
-    { id: 2, name: 'Socket.io', level: '80%', icon: SiSocketdotio },
-    { id: 3, name: 'DevOps', level: '80%', icon: SiAzuredevops },
-    { id: 4, name: 'Problem Solving', level: '80%', icon: ImCheckmark },
-    { id: 5, name: 'Teamwork', level: '80%', icon: ImCheckmark },
-    { id: 6, name: 'Communication', level: '80%', icon: ImCheckmark },
-    { id: 7, name: 'Time Management', level: '80%', icon: ImCheckmark },
-    { id: 8, name: 'Leadership', level: '80%', icon: ImCheckmark },
-    { id: 9, name: 'Creativity', level: '80%', icon: ImCheckmark },
+    { id: 0, name: 'Docker', level: '80%',      icon: Icons.FaDocker },
+    { id: 1, name: 'VC Git', level: '80%',      icon: Icons.FaGitAlt },
+    { id: 2, name: 'Socket.io', level: '80%',   icon: Icons.SiSocketdotio },
+    { id: 3, name: 'DevOps', level: '80%',      icon: Icons.SiAzuredevops },
+    { id: 4, name: 'Problem Solving', level: '80%', icon: Icons.ImCheckmark },
+    { id: 5, name: 'Teamwork', level: '80%',        icon: Icons.ImCheckmark },
+    { id: 6, name: 'Communication', level: '80%',   icon: Icons.ImCheckmark },
+    { id: 7, name: 'Time Management', level: '80%', icon: Icons.ImCheckmark },
+    { id: 8, name: 'Leadership', level: '80%',      icon: Icons.ImCheckmark },
+    { id: 9, name: 'Creativity', level: '80%',      icon: Icons.ImCheckmark },
 ];
-
-
-const Skills = TechnicalSkills
 
 const Certificates = [
     {
@@ -266,15 +193,15 @@ const AboutSection = () => {
 
                                     <ul className='flex flex-col gap-3'>
                                         <li className='flex flex-row items-center gap-2'>
-                                            <ImCheckmark className='text-2xl text-black/45' />
+                                            <Icons.ImCheckmark className='text-2xl text-black/45' />
                                             <span className='text-lg text-slate-500 font-gochi'>Highly motivated and eager to learn new technologies.</span>
                                         </li>
                                         <li className='flex flex-row items-center gap-2'>
-                                            <ImCheckmark className='text-2xl text-black/45' />
+                                            <Icons.ImCheckmark className='text-2xl text-black/45' />
                                             <span className='text-lg text-slate-500 font-gochi'>Strong problem-solving skills and a passion for software development.</span>
                                         </li>
                                         <li className='flex flex-row items-center gap-2'>
-                                            <ImCheckmark className='text-2xl text-black/45' />
+                                            <Icons.ImCheckmark className='text-2xl text-black/45' />
                                             <span className='text-lg text-slate-500 font-gochi'>Excellent communication and teamwork skills.</span>
                                         </li>
                                     </ul>
@@ -306,7 +233,7 @@ const AboutSection = () => {
 
                             {/* <Draggable> */}
                                 <div className='flex flex-row gap-5 justify-center items-center bg-slate-700/40 mx-auto px-6 py-3 rounded-md'>
-                                    <RxDownload /> Download Resume
+                                    <Icons.RxDownload /> Download Resume
                                 </div>
                             {/* </Draggable> */}
 
@@ -368,7 +295,7 @@ const AboutSection = () => {
                                     {
                                         Certificates.map(cert => (
                                             <li className='flex flex-row items-center gap-2' key={cert.id}>
-                                                <ImCheckmark className='text-2xl text-black/45' />
+                                                <Icons.ImCheckmark className='text-2xl text-black/45' />
                                                 <span className='text-lg text-slate-500 font-gochi'> {cert.name} at
                                                     <a
                                                         href={cert.link}
