@@ -39,12 +39,12 @@ const HeroSection = () => {
                         </h1>
 
                         <div className="">
-                            <span className="md:text-[2.5em] text-slate-500 left-0 font-gochi">I'm a </span>
+                            <span className="md:text-[2.5em] text-blue-900/80 left-0 font-gochi">I'm a </span>
                             <InfosAnimation />
                         </div>
 
                         <div className="mt-10" onClick={moreButton}>
-                            <a href="#about" className="bg-blue-100 text-blue-900 px-14  py-3 rounded-2xl hover:bg-blue-200 transition duration-300 ease-in-out">
+                            <a href="#about" className="bg-blue-600/40 text-blue-900 px-14  py-3 rounded-xl hover:bg-blue-200 transition duration-300 ease-in-out">
                                 Discover More ...
                             </a>
                         </div>

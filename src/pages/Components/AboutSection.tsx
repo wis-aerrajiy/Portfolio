@@ -267,7 +267,6 @@ const AboutSection = () => {
                             </Slide>
 
                             <Slide direction="left" triggerOnce>
-
                                 <div
                                     className="flex flex-col stickyNote taped bg-[#D9F5AA]/55 md:rotate-[3deg]"
                                 >

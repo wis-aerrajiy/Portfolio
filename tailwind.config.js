@@ -1,21 +1,25 @@
-/** @type {import('tailwindcss').Config} */
+const withMT = require("@material-tailwind/react/utils/withMT");
 
-export default {
+module.exports = withMT({
+    mode: "jit",
     content: [
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
+
+    darkMode: "class",
     theme: {
         extend: {
             spacing: {
-                'calc': 'calc(100% - 1rem)',
+                calc: "calc(100% - 1rem)",
             },
-            // add font family : font-family: "Permanent Marker", cursive;
             fontFamily: {
-                'permanent': ['Permanent Marker', 'cursive'],
+                permanent: ["Permanent Marker", "cursive"],
             },
         },
-    
+    },
+    variants: {
+        extend: {},
     },
     plugins: [],
-}
+});
