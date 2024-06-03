@@ -269,8 +269,7 @@ const AboutSection = () => {
                             <Slide direction="left" triggerOnce>
 
                                 <div
-                                    className="
-                            flex flex-col stickyNote taped bg-[#D9F5AA]/55 md:rotate-[3deg]"
+                                    className="flex flex-col stickyNote taped bg-[#D9F5AA]/55 md:rotate-[3deg]"
                                 >
                                     <div className="flex justify-center items-center w-full">
                                         <h1 className="underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi">
