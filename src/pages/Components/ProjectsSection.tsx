@@ -28,8 +28,8 @@ const ProjectsSection = () => {
     return (
         <section id="projects">
             <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen max-w-[90vw] min-w-[90vw] lg:min-w-[90vw] lg:max-w-[40vw] rounded-lg  p-5 lg:mx-5">
-                
-                <div className="flex flex-col justify-center items-center bg-blue-700 max-w-[90vw] min-w-[90vw] lg:min-w-[20vw] lg:max-w-[20vw] lg:h-[80vh] rounded-lg  p-5 lg:mx-5 mt-24">
+                <div></div>
+                <div className="flex flex-col justify-between items-center bg-blue-700/55 max-w-[90vw] min-w-[90vw] lg:min-w-[20vw] lg:max-w-[20vw] lg:h-[80vh] rounded-lg  p-5 lg:mx-5 mt-24">
                     <h1 className="text-4xl font-bold text-white underline underline-offset-4">
                         Projects
                     </h1>
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
                 </div>
 
                 <div
-                    className="bg-red-700 mt-5 lg:mt-28 shadow-sm relative lg:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[40vw] lg:max-w-[40vw] lg:h-[80vh]  rounded-lg  p-5 lg:mx-5"
+                    className="bg-red-700/5 mt-5 lg:mt-28 shadow-sm relative lg:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[40vw] lg:max-w-[40vw] lg:h-[80vh]  rounded-lg  p-5 lg:mx-5"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-lg lg:p-5 hover:place-items-stretch">
                         {
