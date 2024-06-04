@@ -1,6 +1,6 @@
 
-import { color } from 'framer-motion';
-import React from 'react'
+// import { color } from 'framer-motion';
+// import React from 'react'
 
 // const generateColor = () => {
 //     var color = '#' + Math.floor(Math.random() * 16777215).toString(16);
