@@ -16,7 +16,7 @@ const PersonalInfo = () => {
 
     return (
         <div className="bg-rose-100/5 min-h-screen min-w-[90vw] rounded-md">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-center items-center m-auto h-[auto] w-[85vw] md:w-[50vw] md:h-screen max-w-[90vw] rounded-lg ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-center items-center m-auto h-[auto] w-[85vw] xl:w-[50vw] md:h-screen max-w-[90vw] rounded-lg ">
                 <Slide direction="left" triggerOnce className="max-w-[90vw]">
                     <div className="mx-1">
                         <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
@@ -79,7 +79,7 @@ const PersonalInfo = () => {
                     </div>
                 </div>
 
-                <div className="md:row-start-1 md:row-end-2 md:row-span-2 md:col-span-2 md:max-h-[1px]">
+                <div className="lg:row-start-1 lg:row-end-2 lg:row-span-2 lg:col-span-2 lg:max-h-[1px]">
                     <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg] ">
                         <p className="text-lg text-slate-500 text-justify font-gochi">
                             I believe that every problem can be solved with one more if

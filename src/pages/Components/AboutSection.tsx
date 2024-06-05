@@ -99,7 +99,7 @@ const AboutSection = () => {
 
                     <PersonalInfo />
 
-                    <div className="shadow-sm relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[90vh]  rounded-lg  p-5 mx-5">
+                    <div className="shadow-sm relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-8 max-w-[90vw] min-w-[90vw] md:min-w-[90vw] md:max-w-[90vw] xl:min-w-[50vw] lg:max-w-[50vw] md:h-[90vh]  rounded-lg  p-5 mx-5">
                         {/* <Fade cascade direction="up" triggerOnce damping={0.1}> */}
                             {/* <Slide direction="left" triggerOnce> */}
                                 <div className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F6EDA9]/55 md:!rotate-[-3deg]">
