@@ -1,7 +1,11 @@
 import { TypeAnimation } from 'react-type-animation';
 import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Fade } from "react-awesome-reveal";
+
 
 const HeroSection = () => {
+    const navigate = useNavigate();
     const InfosAnimation = () => {
         return (
             <TypeAnimation
@@ -23,24 +27,50 @@ const HeroSection = () => {
         );
     };
 
-    const navigate = useNavigate();
 
     const moreButton = () => {
         navigate('/about');
     }
 
+    React.useEffect(() => {
+        const handleScroll = (event: any) => {
+
+            if (Math.ceil(window.innerHeight + window.scrollY) >= Math.floor(document.body.scrollHeight) && event.deltaY > 0) {
+                navigate('/about');
+            }
+
+
+            console.table({
+                innerHeight: window.innerHeight,
+                scrollY: window.scrollY,
+                bodyScrollHeight: document.body.scrollHeight,
+            });
+        };
+        window.addEventListener('wheel', handleScroll);
+        return () => {
+            window.removeEventListener('wheel', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <section id="hero ">
+            <section id="hero">
                 <div className="flex flex-col justify-center items-center  min-h-screen">
                     <div className="flex flex-col ">
-                        <h1 className="text-2xl md:text-6xl text-blue-900 ">
-                            Hi, I'm <span className="text-blue-900">Aiman Errajiy</span>
-                        </h1>
+                        <Fade direction="down" triggerOnce big cascade damping={0.5} duration={2000}>
+                            <h1 className="text-2xl md:text-6xl text-blue-900 ">
+                                Hi, I'm <span className="text-blue-900">Aiman Errajiy</span>
+                            </h1>
+                        </Fade>
 
-                        <div className="">
-                            <span className="md:text-[2.5em] text-blue-900/80 left-0 font-gochi">I'm a </span>
-                            <InfosAnimation />
+                        <div className="flex justify-start items-center space-x-4">
+                            <Fade direction="left" triggerOnce className='align-middle'>
+                                <span className="md:text-[2.5em] text-blue-900/80 left-0 font-gochi">I'm a </span>
+                            </Fade>
+
+                            <Fade direction="right" triggerOnce className='align-middle'>
+                                <InfosAnimation />
+                            </Fade>
                         </div>
 
                         <div className="mt-10" onClick={moreButton}>

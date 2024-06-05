@@ -1,8 +1,9 @@
-import React from "react";
 import * as Icons from "../Icons";
 import "../../../index.css";
 import { Fade } from "react-awesome-reveal";
 import PersonalInfo from "./PersonalInfo";
+import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const TechnicalSkills = [
     { id: 0, name: "Web Dev", level: "80%", icon: Icons.PiDevToLogoFill },
@@ -76,6 +77,7 @@ const SkillComponent = ({ skill }: SkillProps) => {
 };
 
 const AboutSection = () => {
+    const navigate = useNavigate();
     const [quote, setQuote] = React.useState("");
 
     const DownloadHandle = (type: string) => {
@@ -91,6 +93,28 @@ const AboutSection = () => {
                 setQuote(data && data[0] ? data[0].content : "No Quote Found");
             });
     }, []);
+
+    React.useEffect(() => {
+        const handleScroll = (event: any) => {
+            if (window.scrollY == 0 && event.deltaY < 0) {
+                navigate('/');
+            }
+            if (Math.ceil(window.innerHeight + window.scrollY) >= Math.floor(document.body.scrollHeight - 100) && event.deltaY > 0) {
+                navigate('/projects');
+            }
+
+            console.table({
+                innerHeight: window.innerHeight,
+                scrollY: window.scrollY,
+                bodyScrollHeight: document.body.scrollHeight,
+            });
+        };
+        window.addEventListener('wheel', handleScroll);
+        return () => {
+            window.removeEventListener('wheel', handleScroll);
+        };
+    }, []);
+
 
     return (
         <>
