@@ -1,19 +1,8 @@
 import React from "react";
 import * as Icons from "./Icons";
 import "../../index.css";
-import dabous from "../../assets/dabous.png";
 import { Slide, Fade } from "react-awesome-reveal";
-
-const socials = [
-    { id: 0, link: "", icon: Icons.FaGithub },
-    { id: 1, link: "", icon: Icons.SiLinkedin },
-    { id: 2, link: "", icon: Icons.FaTwitter },
-];
-
-const PersonalInfo = [
-    { id: 0, icon: Icons.FaPhoneAlt, info: "+212 658506376" },
-    { id: 1, icon: Icons.MdEmail, info: "aerrajiy.intra@gmail.com" },
-];
+import PersonalInfo from "./PersonalInfo";
 
 const TechnicalSkills = [
     { id: 0, name: "Web Dev", level: "80%", icon: Icons.PiDevToLogoFill },
@@ -106,80 +95,11 @@ const AboutSection = () => {
     return (
         <>
             <section id="about">
-                <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen space-y-5 md:space-y-24 lg:space-y-10 lg:space-x-50 mt-24 lg:mt-0">
-                    <div className="grid grid-cols-1 h-[auto] w-[90vw] lg:w-[auto] md:h-[90vh] max-w-[90vw] rounded-lg md:m-24 lg:m-auto">
-                        <Slide direction="left" triggerOnce>
-                            <div className="mx-5">
-                                <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
-                                    <div className="relative -z-1 ring-1 ring-gray-600/15">
-                                        <img
-                                            src="https://badge.mediaplus.ma/darkblue/aerrajiy"
-                                            alt="profile"
-                                            className="rounded-lg w-[100%] object-cover rotate-[5deg] filter opacity-90 shadow-2xl"
-                                        />
-                                        <img
-                                            src={dabous}
-                                            alt="dabous"
-                                            className="absolute -top-4 left-[40%] md:left-[45%] rounded-lg w-[50px] filter  contrast-150 "
-                                        />
-                                    </div>
+                <div className="flex flex-col justify-center items-center min-h-screen space-y-1 lg:mt-0 mt-24">
 
-                                    <h3 className="text-2xl md:text-4xl text-blue-900 underline rotate-6 mt-5">
-                                        Aiman Errajiy
-                                    </h3>
+                    <PersonalInfo />
 
-                                    <p className="text-lg md:text-lg text-slate-500 ml-20 rotate-6 mt-2">
-                                        Also Known As{" "}
-                                        <span className="text-blue-900 underline-offset-8 underline px-3">
-                                            Wis
-                                        </span>
-                                    </p>
-                                </div>
-
-                                <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
-                                    <p className="text-lg text-slate-500 text-justify font-gochi">
-                                        I believe that every problem can be solved with one more if
-                                    </p>
-                                </div>
-                            </div>
-                        </Slide>
-
-                        <div className="mx-5">
-                            <div className="stickyNote taped bg-[#A9F4DB] mx-5 ">
-                                <div className="">
-                                    <ul className="flex justify-evenly items-center">
-                                        {socials.map((item) => (
-                                            <li
-                                                key={item.id}
-                                                className="p-4 rounded-lg flex items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2"
-                                            >
-                                                {" "}
-                                                <item.icon />{" "}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <div className=" mt-10 max-w-[100%]">
-                                        <ul className="flex flex-col justify-between items-center gap-5">
-                                            {PersonalInfo.map((item) => (
-                                                <li
-                                                    key={item.id}
-                                                    className="m-2 w-full p-4 rounded-lg flex flex-row items-center border border-gray-300 group transition-all duration-500 hover:-translate-y-2"
-                                                >
-                                                    <item.icon className="hidden md:block mx-3" />
-                                                    <span className="font-gochi text-slate-700 ring-offset-opacity-50">
-                                                        {item.info}
-                                                    </span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="shadow-sm relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 md:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[90vh]  rounded-lg  p-5 mx-5">
-
+                    <div className="shadow-sm relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[90vh]  rounded-lg  p-5 mx-5">
                         <Fade cascade direction="up" triggerOnce damping={0.1}>
                             <Slide direction="left" triggerOnce>
                                 <div className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F6EDA9]/55 md:!rotate-[-3deg]">
@@ -191,9 +111,9 @@ const AboutSection = () => {
 
                                     <div className="flex flex-col gap-5">
                                         <p className="text-lg text-slate-500 text-justify font-gochi">
-                                            I am a 24-year-old software developer at 1337 Coding School
-                                            and a passionate full-stack developer. Specializing in
-                                            Back-end development, database management, and Dev-Ops
+                                            I am a 24-year-old software developer at 1337 Coding
+                                            School and a passionate full-stack developer. Specializing
+                                            in Back-end development, database management, and Dev-Ops
                                             workflow. I thrive on creative problem-solving. I am
                                             dedicated to crafting innovative digital solutions.
                                         </p>
@@ -208,8 +128,8 @@ const AboutSection = () => {
                                             <li className="flex flex-row items-center gap-2">
                                                 <Icons.ImCheckmark className="text-2xl text-black/45" />
                                                 <span className="text-lg text-slate-500 font-gochi">
-                                                    Strong problem-solving skills and a passion for software
-                                                    development.
+                                                    Strong problem-solving skills and a passion for
+                                                    software development.
                                                 </span>
                                             </li>
                                             <li className="flex flex-row items-center gap-2">
@@ -243,7 +163,6 @@ const AboutSection = () => {
                             </Slide>
 
                             <Slide direction="right" triggerOnce>
-
                                 <div className=" md:col-start-1 md:col-span-1 md:row-start-2 md:row-span-1 flex flex-col stickyNote taped bg-[#D9F5AA]/55 md:rotate-[3deg]">
                                     <div className="flex justify-center items-center w-full">
                                         <h1 className="underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi">
@@ -267,9 +186,7 @@ const AboutSection = () => {
                             </Slide>
 
                             <Slide direction="left" triggerOnce>
-                                <div
-                                    className="flex flex-col stickyNote taped bg-[#D9F5AA]/55 md:rotate-[3deg]"
-                                >
+                                <div className="flex flex-col stickyNote taped bg-[#D9F5AA]/55 md:rotate-[3deg]">
                                     <div className="flex justify-center items-center w-full">
                                         <h1 className="underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi">
                                             My Skilles
@@ -302,16 +219,16 @@ const AboutSection = () => {
                                     <div className="flex flex-col">
                                         <p className="text-lg text-slate-500 text-justify font-gochi">
                                             I believe in writing clean, maintainable code and
-                                            continuously improving through feedback. Embracing Agile and
-                                            DevOps principles, I focus on collaboration, automation, and
-                                            bridging the gap between development and operations.
+                                            continuously improving through feedback. Embracing Agile
+                                            and DevOps principles, I focus on collaboration,
+                                            automation, and bridging the gap between development and
+                                            operations.
                                         </p>
                                     </div>
                                 </div>
                             </Slide>
 
                             <Slide direction="left" triggerOnce>
-
                                 <div className="flex flex-col stickyNote taped space-y-5 bg-[#A9F4DB]/55 md:rotate-[10deg]">
                                     <div className="flex justify-center items-center w-full">
                                         <h1 className="underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi">

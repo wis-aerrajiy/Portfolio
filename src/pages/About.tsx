@@ -1,15 +1,16 @@
-import { lazy, Suspense } from 'react';
+import { AboutSection } from './Components';
 
-const AboutSection = lazy(() => import('./Components/AboutSection'));
-import LoadingPage from './LoadingPage';
+// import { lazy, Suspense } from 'react';
+// const AboutSection = lazy(() => import('./Components/AboutSection'));
+// import LoadingPage from './LoadingPage';
 
 const About = () => {
     return (
         <>
-            <div className="flex flex-col justify-center items-center">
-                <Suspense fallback={<LoadingPage />}>
+            <div className="flex flex-col justify-center items-center min-w-[100vw]">
+                {/* <Suspense fallback={<LoadingPage />}> */}
                     <AboutSection />
-                </Suspense>
+                {/* </Suspense> */}
             </div>
         </>
     )
