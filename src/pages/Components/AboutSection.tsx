@@ -1,7 +1,7 @@
 import React from "react";
 import * as Icons from "./Icons";
 import "../../index.css";
-import { Slide, Fade } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import PersonalInfo from "./PersonalInfo";
 
 const TechnicalSkills = [
@@ -100,7 +100,7 @@ const AboutSection = () => {
                     <PersonalInfo />
 
                     <div className="shadow-sm relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-8 lg:grid-cols-2 max-w-[90vw] min-w-[90vw] lg:min-w-[50vw] lg:max-w-[50vw] md:h-[90vh]  rounded-lg  p-5 mx-5">
-                        <Fade cascade direction="up" triggerOnce damping={0.1}>
+                        {/* <Fade cascade direction="up" triggerOnce damping={0.1}> */}
                             <Slide direction="left" triggerOnce>
                                 <div className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F6EDA9]/55 md:!rotate-[-3deg]">
                                     <div className="flex justify-center items-center w-full">
@@ -271,7 +271,7 @@ const AboutSection = () => {
                                     </div>
                                 </div>
                             </Slide>
-                        </Fade>
+                        {/* </Fade> */}
                         <div className="flex flex-col stickyNote taped space-y-5 bg-[#C0D2F5]/55 md:col-start-1 md:col-span-2 md:row-span-2">
                             <div className="flex justify-center items-center w-full">
                                 <h1 className="underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi">
