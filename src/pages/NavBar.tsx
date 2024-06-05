@@ -6,6 +6,7 @@ import { GoHomeFill } from "react-icons/go";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { CiFolderOn } from "react-icons/ci";
 import { LuMessageCircle } from "react-icons/lu";
+import { FaArrowDown } from "react-icons/fa6";
 
 
 
@@ -28,11 +29,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 25) {
-                setIsLogoVisible(false);
-            } else {
-                setIsLogoVisible(true);
-            }
+            (window.scrollY > 50) ? setIsLogoVisible(false) : setIsLogoVisible(true);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -68,6 +65,17 @@ const Navbar = () => {
                             </button>
                         )
                 }
+            </div>
+
+            <div className={`fixed bottom-10 left-[10vw] z-40 ${isLogoVisible ? 'md:block' :'hidden'}`}>
+                <div className='flex flex-row items-center justify-center bg-gray-600/10 md:bg-[#ffffff]/5 rounded-full'>
+                    <div className='motion-safe:animate-bounce m-4'>
+                        <FaArrowDown className='text-2xl text-black/50' />
+                    </div>
+                    <div className='text-black/50 text-2xl hidden md:block'>
+                        Scroll Down
+                    </div>
+                </div>
             </div>
 
             <div className='flex z-20 justify-between items-center h-24 px-4 text-white rounded-sm fixed top-0 w-full md:max-w-[100%] max-w-[100%]'>

@@ -1,5 +1,5 @@
-import * as Icons from "./Icons";
-import dabous from "../../assets/dabous.png";
+import * as Icons from "../Icons";
+import dabous from "../../../assets/dabous.png";
 import { Slide } from "react-awesome-reveal";
 
 const PersonalInfo = () => {
@@ -8,7 +8,7 @@ const PersonalInfo = () => {
         { id: 1, link: "", icon: Icons.SiLinkedin },
         { id: 2, link: "", icon: Icons.FaTwitter },
     ];
-    
+
     const PersonalInfo = [
         { id: 0, icon: Icons.FaPhoneAlt, info: "+212 658506376" },
         { id: 1, icon: Icons.MdEmail, info: "aerrajiy.intra@gmail.com" },
@@ -46,44 +46,47 @@ const PersonalInfo = () => {
                     </div>
                 </Slide>
 
-                <div className="mx-1">
-                    <div className="stickyNote taped bg-[#A9F4DB] mx-5 ">
-                        <div className="">
-                            <ul className="flex justify-evenly items-center">
-                                {socials.map((item) => (
-                                    <li
-                                        key={item.id}
-                                        className="p-4 rounded-lg flex items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2"
-                                    >
-                                        {" "}
-                                        <item.icon />{" "}
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className=" mt-10 max-w-[100%]">
-                                <ul className="flex flex-col justify-between items-center gap-5">
-                                    {PersonalInfo.map((item) => (
+                <Slide direction="right" triggerOnce className="max-w-[90vw]" fraction={0.3}>
+
+                    <div className="mx-1">
+                        <div className="stickyNote taped bg-[#A9F4DB] mx-5 ">
+                            <div className="">
+                                <ul className="flex justify-evenly items-center">
+                                    {socials.map((item) => (
                                         <li
                                             key={item.id}
-                                            className="m-2 w-full p-4 rounded-lg flex flex-row items-center border border-gray-300 group transition-all duration-500 hover:-translate-y-2"
+                                            className="p-4 rounded-lg flex items-center border border-gray-300 justify-center group transition-all duration-500 hover:-translate-y-2"
                                         >
-                                            <item.icon className="hidden md:block mx-3" />
-                                            <span className="font-gochi text-slate-700 ring-offset-opacity-50">
-                                                {item.info}
-                                            </span>
+                                            {" "}
+                                            <item.icon />{" "}
                                         </li>
                                     ))}
                                 </ul>
+                                <div className=" mt-10 max-w-[100%]">
+                                    <ul className="flex flex-col justify-between items-center gap-5">
+                                        {PersonalInfo.map((item) => (
+                                            <li
+                                                key={item.id}
+                                                className="m-2 w-full p-4 rounded-lg flex flex-row items-center border border-gray-300 group transition-all duration-500 hover:-translate-y-2"
+                                            >
+                                                <item.icon className="hidden md:block mx-3" />
+                                                <span className="font-gochi text-slate-700 ring-offset-opacity-50">
+                                                    {item.info}
+                                                </span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Slide>
 
-                <div className="lg:row-start-1 lg:row-end-2 lg:row-span-2 lg:col-span-2 lg:max-h-[1px]">
-                    <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg] ">
-                        <p className="text-lg text-slate-500 text-justify font-gochi">
-                            I believe that every problem can be solved with one more if
-                        </p>
+                <div className="md:row-start-1 md:row-end-2 md:row-span-2 md:col-span-2 md:max-h-[1px]">
+                    <div className="flex justify-center items-center stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg] ">
+                        <div className="body-container font-gochi">
+                            I believe that every problem can be solved with one more <code className="code">&lt;if/&gt;</code> in the right place.
+                        </div>
                     </div>
                 </div>
             </div>

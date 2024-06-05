@@ -1,18 +1,3 @@
-
-// import { color } from 'framer-motion';
-// import React from 'react'
-
-// const generateColor = () => {
-//     var color = '#' + Math.floor(Math.random() * 16777215).toString(16);
-//     return color;
-// }
-
-// const colors: string[] = [];
-
-// for (let i = 0; i < 9; i++) {
-//     colors.push(generateColor())
-// }
-
 const ProjectsSection = () => {
     const projects: any = [];
 
