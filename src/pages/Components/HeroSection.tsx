@@ -105,7 +105,7 @@ const HeroSection = () => {
         const randomPosition = (element: any) => {
             if (element.current) {
                 element.current.style.top = `${Math.floor(Math.random() * 80)}%`;
-                element.current.style.left = `${Math.floor(Math.random() * 80)}%`;
+                element.current.style.left = `${Math.floor(Math.random() * 70) + 10}%`;
                 element.current.style.animationDuration = `${Math.floor(Math.random() * 4)}s`;
 
                 element.current.style.width = `${Math.floor(Math.random() * 150) + 100}px`;
