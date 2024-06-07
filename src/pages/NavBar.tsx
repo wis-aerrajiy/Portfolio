@@ -12,6 +12,7 @@ import { SelectedBarContext } from '../Context/SelectedBarContext';
 
 const Navbar = () => {
     const { selectedBar, setSelectedBar } = useContext(SelectedBarContext);
+    
     const [nav, setNav] = useState(false);
     const [isLogoVisible, setIsLogoVisible] = useState(true);
 

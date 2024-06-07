@@ -22,7 +22,8 @@ const PersonalInfo = () => {
                         <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
                             <div className="relative -z-1 ring-1 ring-gray-600/15">
                                 <img
-                                    src="https://badge.mediaplus.ma/darkblue/aerrajiy"
+                                    // src="https://badge.mediaplus.ma/darkblue/aerrajiy"
+                                    src="aerrajiy.svg"
                                     alt="profile"
                                     className="rounded-lg w-[100%] object-cover rotate-[5deg] filter opacity-90 shadow-2xl"
                                 />
@@ -33,10 +34,10 @@ const PersonalInfo = () => {
                                 />
                             </div>
 
-                            <h3 className="text-2xl md:text-4xl text-blue-900 underline rotate-6 mt-5">
+                            <h3 className="text-2xl text-center md:text-4xl text-blue-900 underline rotate-0 mt-5 ">
                                 Aiman Errajiy
                             </h3>
-                            <p className="text-lg md:text-lg text-slate-500 ml-20 rotate-6 mt-2">
+                            <p className="text-lg md:text-lg text-right text-slate-500 ml-20 rotate-0 mt-2">
                                 Also Known As{" "}
                                 <span className="text-blue-900 underline-offset-8 underline px-3">
                                     Wis
