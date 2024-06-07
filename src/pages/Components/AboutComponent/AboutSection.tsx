@@ -64,7 +64,7 @@ interface SkillProps {
 const SkillComponent = ({ skill }: SkillProps) => {
     return (
         <div className="relative flex flex-row justify-between items-center px-2 py-1 !bg-[#EAF9D0] border border-slate-700 rounded-lg rounded-tl-md hover:scale-105 transition-all duration-500">
-            <skill.icon className="text-4xl p-2 rounded-lg border border-gray-300" />
+            {/* <skill.icon className="text-4xl p-2 rounded-lg border border-gray-300" /> */}
 
             <div className="flex justify-center items-start font-gochi text-2xl text-slate-700 ring-offset-opacity-50 px-1">
                 <span className="font-gochi md:text-xl text-sm !font-bold">
@@ -95,6 +95,7 @@ const AboutSection = () => {
 
     React.useEffect(() => {
         const handleScroll = (event: any) => {
+            return ;
             if (window.scrollY == 0 && event.deltaY < 0) {
                 navigate('/');
             }
@@ -102,11 +103,11 @@ const AboutSection = () => {
                 navigate('/projects');
             }
 
-            console.table({
-                innerHeight: window.innerHeight,
-                scrollY: window.scrollY,
-                bodyScrollHeight: document.body.scrollHeight,
-            });
+            // console.table({
+            //     innerHeight: window.innerHeight,
+            //     scrollY: window.scrollY,
+            //     bodyScrollHeight: document.body.scrollHeight,
+            // });
         };
         window.addEventListener('wheel', handleScroll);
         window.addEventListener('scroll', handleScroll);

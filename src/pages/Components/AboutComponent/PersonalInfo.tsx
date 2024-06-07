@@ -17,12 +17,14 @@ const PersonalInfo = () => {
     return (
         <div className="bg-rose-100/5 min-h-screen min-w-[90vw] rounded-md">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-center items-center m-auto h-[auto] w-[85vw] xl:w-[50vw] md:h-screen max-w-[90vw] rounded-lg">
-                <Slide direction="left" triggerOnce className="max-w-[90vw]">
+                <Slide
+                    direction="left" triggerOnce className="max-w-[90vw]"
+                    // delay={2000}
+                >
                     <div className="mx-1">
                         <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
                             <div className="relative -z-1 ring-1 ring-gray-600/15">
                                 <img
-                                    // src="https://badge.mediaplus.ma/darkblue/aerrajiy"
                                     src="aerrajiy.svg"
                                     alt="profile"
                                     className="rounded-lg w-[100%] object-cover rotate-[5deg] filter opacity-90 shadow-2xl"
@@ -38,16 +40,19 @@ const PersonalInfo = () => {
                                 Aiman Errajiy
                             </h3>
                             <p className="text-lg md:text-lg text-right text-slate-500 ml-20 rotate-0 mt-2">
-                                Also Known As{" "}
-                                <span className="text-blue-900 underline-offset-8 underline px-3">
-                                    Wis
+                                AkA{" "}
+                                <span className="text-blue-900 underline-offset-8 underline px-1">
+                                    wis
                                 </span>
                             </p>
                         </div>
                     </div>
                 </Slide>
 
-                <Slide direction="right" triggerOnce className="max-w-[90vw]" fraction={0.3}>
+                <Slide
+                    direction="right" triggerOnce className="max-w-[90vw]"
+                    // delay={2000}
+                >
 
                     <div className="mx-1">
                         <div className="stickyNote taped bg-[#A9F4DB] mx-5 ">

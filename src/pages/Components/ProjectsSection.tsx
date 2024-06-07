@@ -12,9 +12,9 @@ const ProjectsSection = () => {
 
     return (
         <section id="projects">
-            <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen max-w-[90vw] min-w-[90vw] lg:min-w-[90vw] lg:max-w-[40vw] rounded-lg  p-5 lg:mx-5">
-                <div></div>
-                <div className="flex flex-col justify-between items-center bg-blue-700/55 max-w-[90vw] min-w-[90vw] lg:min-w-[20vw] lg:max-w-[20vw] lg:h-[80vh] rounded-lg  p-5 lg:mx-5 mt-24">
+            <div className="flex flex-col justify-center items-center min-h-screen max-w-[90vw] min-w-[90vw] xl:min-w-[90vw] xl:max-w-[40vw] rounded-lg  p-5 lg:mx-5">
+
+                <div className="flex flex-col justify-between items-center bg-blue-700/55 max-w-[95vw] min-w-[95vw] xl:min-w-[60vw] xl:max-w-[60vw] xl:h-[auto] rounded-lg  p-5 xl:mx-5 mt-24">
                     <h1 className="text-4xl font-bold text-white underline underline-offset-4">
                         Projects
                     </h1>
@@ -24,9 +24,9 @@ const ProjectsSection = () => {
                 </div>
 
                 <div
-                    className="bg-red-700/5 mt-5 lg:mt-28 shadow-sm relative lg:overflow-scroll myscrollbar max-w-[90vw] min-w-[90vw] lg:min-w-[40vw] lg:max-w-[40vw] lg:h-[80vh]  rounded-lg  p-5 lg:mx-5"
+                    className="mt-5 lg:mt-28 relative lg:overflow-scroll myscrollbar max-w-[95vw] min-w-[95vw] xl:min-w-[60vw] xl:max-w-[60vw] xl:h-[auto]  rounded-lg  p-5 lg:mx-5"
                 >
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-lg lg:p-5 hover:place-items-stretch">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-20 rounded-lg lg:p-5 hover:place-items-stretch">
                         {
                             projects.map((project: any, index: any) => {
                                 const randomIndex = Math.floor(Math.random() * 8)
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
                                     <div id={`${index}`}
                                         className={`
                                         stickyNote taped lg:!rotate-[${(!(randomIndex % 2)) ? '-3' : '3'}deg] bg-${project.color}
-                                        hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:rotate-6 
+                                        hover:shadow-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-101 hover:rotate-2
                                     `}
                                     >
                                         <div className="

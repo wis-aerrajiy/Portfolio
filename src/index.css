@@ -14,7 +14,7 @@ html,
     cursor: -webkit-grab;
 
     height: 100%;
-    background-color: #ffffff;
+    background-color: #EAEAEA;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ccircle fill='rgb(220,220,220)' cx='3' cy='3' r='1.5'/%3E%3C/svg%3E");
     /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ccircle fill='rgb(128,0,0)' cx='3' cy='3' r='1.5'/%3E%3C/svg%3E"); */
     /* background-image: url("/background.svg"); 234, 234, 241*/

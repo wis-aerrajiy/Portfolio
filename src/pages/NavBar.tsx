@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import NavImages from '../assets/nav/wis_logo.jpg';
@@ -12,7 +12,8 @@ import { SelectedBarContext } from '../Context/SelectedBarContext';
 
 const Navbar = () => {
     const { selectedBar, setSelectedBar } = useContext(SelectedBarContext);
-    
+    const navRef = useRef(null);
+
     const [nav, setNav] = useState(false);
     const [isLogoVisible, setIsLogoVisible] = useState(true);
 
@@ -29,7 +30,17 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            (window.scrollY > 50) ? setIsLogoVisible(false) : setIsLogoVisible(true);
+            if (window.scrollY > 50) {
+                setIsLogoVisible(false);
+                if (navRef && navRef.current) {
+                    (navRef.current as any).classList.add('bg-slate-500/20');
+                }
+            } else {
+                setIsLogoVisible(true);
+                if (navRef && navRef.current) {
+                    (navRef.current as any).classList.remove('bg-slate-500/20');
+                }
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -41,7 +52,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div onClick={handleNav} className='fixed right-4 top-7 md:hidden mr-4 z-40 '>
+            <div onClick={handleNav} className='fixed right-4 top-7 md:hidden mr-4 z-40'>
                 {
                     !nav
                         ?
@@ -78,7 +89,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='flex z-20 justify-between items-center h-24 px-4 text-white rounded-sm fixed top-0 w-full md:max-w-[100%] max-w-[100%]'>
+            <div ref={navRef} className='flex z-20 justify-between items-center h-24 px-4 text-white rounded-sm fixed top-0 w-full md:max-w-[100%] max-w-[100%]'>
                 <div>
                     <img src={NavImages} alt="tailwindcss_logo" width="50px"
                         className={`
