@@ -1,15 +1,10 @@
-import { lazy, Suspense } from 'react';
-
-const AboutSection = lazy(() => import('./Components/ProjectsSection'));
-import LoadingPage from './LoadingPage';
+import ProjectsSection from './Components/ProjectsSection';
 
 const Projects = () => {
     return (
         <>
             <div className="flex flex-col justify-center items-center">
-                <Suspense fallback={<LoadingPage />}>
-                    <AboutSection />
-                </Suspense>
+                <ProjectsSection />
             </div>
         </>
     )

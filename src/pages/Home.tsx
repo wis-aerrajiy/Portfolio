@@ -1,15 +1,9 @@
-import { lazy, Suspense } from 'react';
 import { HeroSection } from './Components';
 
-// const HeroSection = lazy(() => import('./Components/HeroSection'));
-// import LoadingPage from './LoadingPage';
-
-export const Home = ({ setSelectedBar } : any) => {
+export const Home = () => {
     return (
         <>
-            {/* <Suspense fallback={<LoadingPage />}> */}
-                <HeroSection />
-            {/* </Suspense> */}
+            <HeroSection />
         </>
     )
 }
