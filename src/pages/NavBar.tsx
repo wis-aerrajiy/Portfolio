@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import NavImages from '../assets/nav/wis_logo.jpg';
@@ -7,13 +7,12 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 import { CiFolderOn } from "react-icons/ci";
 import { LuMessageCircle } from "react-icons/lu";
 import { FaArrowDown } from "react-icons/fa6";
-
-
+import { SelectedBarContext } from '../Context/SelectedBarContext';
 
 
 const Navbar = () => {
+    const { selectedBar, setSelectedBar } = useContext(SelectedBarContext);
     const [nav, setNav] = useState(false);
-    const [selectNav, setSelectNav] = useState(0);
     const [isLogoVisible, setIsLogoVisible] = useState(true);
 
     const handleNav = () => {
@@ -67,12 +66,12 @@ const Navbar = () => {
                 }
             </div>
 
-            <div className={`fixed bottom-10 left-[10vw] z-40 ${isLogoVisible ? 'md:block' :'hidden'}`}>
+            <div className={`fixed bottom-10 left-[10vw] z-40 ${isLogoVisible ? 'md:block' : 'hidden'}`}>
                 <div className='flex flex-row items-center justify-center bg-gray-600/10 md:bg-[#ffffff]/5 rounded-full'>
                     <div className='motion-safe:animate-bounce m-4'>
-                        <FaArrowDown className='text-2xl text-black/50' />
+                        <FaArrowDown className='text-2xl text-black/30' />
                     </div>
-                    <div className='text-black/50 text-2xl hidden md:block'>
+                    <div className='text-black/30 text-2xl hidden md:block'>
                         Scroll Down
                     </div>
                 </div>
@@ -93,13 +92,13 @@ const Navbar = () => {
                             <Link
                                 to={item.link.toLowerCase()}
                                 key={item.id}
-                                onClick={() => setSelectNav(index)}
+                                onClick={() => setSelectedBar(index)}
                             >
                                 <div
                                     className={
                                         `
                                         flex items-center flex-row-reverse px-6 py-3  rounded-xl m-2 cursor-pointer duration-300 text-black hover:bg-red-100/75 hover:text-black
-                                        ${selectNav === index && 'bg-red-100/75 text-black'}
+                                        ${selectedBar === index && 'bg-red-100/75 text-black'}
                                         `
                                     }
                                 >

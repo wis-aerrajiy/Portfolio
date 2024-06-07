@@ -27,7 +27,6 @@ const OtherSkills = [
     { id: 4, name: "Problem Solving", level: "80%", icon: Icons.ImCheckmark },
     { id: 5, name: "Teamwork", level: "80%", icon: Icons.ImCheckmark },
     { id: 6, name: "Communication", level: "80%", icon: Icons.ImCheckmark },
-    { id: 7, name: "Time Management", level: "80%", icon: Icons.ImCheckmark },
     { id: 8, name: "Leadership", level: "80%", icon: Icons.ImCheckmark },
     { id: 9, name: "Creativity", level: "80%", icon: Icons.ImCheckmark },
 ];

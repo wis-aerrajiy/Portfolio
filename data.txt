@@ -1,0 +1,8 @@
+GET /walo HTTP/1.1
+User-Agent: PostmanRuntime/7.39.0
+Accept: */*
+Postman-Token: 94eaf3c9-9742-42a0-9a82-6abf6b59d8d2
+Host: 0.0.0.0:5050
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+

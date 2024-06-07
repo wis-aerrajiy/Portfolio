@@ -2,10 +2,13 @@ import { TypeAnimation } from 'react-type-animation';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { Fade } from "react-awesome-reveal";
+import { SelectedBarContext } from '../../Context/SelectedBarContext';
 
 
 const HeroSection = () => {
     const navigate = useNavigate();
+    const { setSelectedBar } = React.useContext(SelectedBarContext);
+
     const InfosAnimation = () => {
         return (
             <TypeAnimation
@@ -29,16 +32,16 @@ const HeroSection = () => {
 
 
     const moreButton = () => {
+        setSelectedBar(1);
         navigate('/about');
     }
 
     React.useEffect(() => {
         const handleScroll = (event: any) => {
-
             if (Math.ceil(window.innerHeight + window.scrollY) >= Math.floor(document.body.scrollHeight) && event.deltaY > 0) {
+                setSelectedBar(1);
                 navigate('/about');
             }
-
 
             console.table({
                 innerHeight: window.innerHeight,
