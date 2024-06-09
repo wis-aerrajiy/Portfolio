@@ -121,6 +121,10 @@ html,
     font-weight: bold;
 }
 
+.space-mono {
+    font-family: 'Space Mono', monospace;
+}
+
 
 /* [
     {

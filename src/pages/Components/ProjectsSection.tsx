@@ -13,73 +13,60 @@ const ProjectsSection = () => {
     return (
         <section id="projects">
             <div className="flex flex-col justify-center items-center min-h-screen max-w-[90vw] min-w-[90vw] xl:min-w-[90vw] xl:max-w-[40vw] rounded-lg  p-5 lg:mx-5">
+ 
+                <div className="flex flex-col justify-between items-center max-w-[95vw] min-w-[95vw] xl:max-w-[70vw] xl:min-w-[70vw] md:max-w-[90vw] md:min-w-[90vw] mt-24">
 
-                <div className="flex flex-col justify-between items-center bg-blue-700/55 max-w-[95vw] min-w-[95vw] xl:min-w-[60vw] xl:max-w-[60vw] xl:h-[auto] rounded-lg  p-5 xl:mx-5 mt-24">
-                    <h1 className="text-4xl font-bold text-white underline underline-offset-4">
-                        Projects
-                    </h1>
-                    <p className="text-white">
-                        Here are some of the projects I have worked on.
-                    </p>
-                </div>
+                    {
+                        Array.from({ length: 6 }).map((_, i) => (
+                            <div
+                                className={`
+                                    bg-slate-500/30 m-5 rounded-md
+                                    flex flex-col-reverse
+                                    ${(i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse')}
+                                    justify-between items-center space-y-3
+                                    filter drop-shadow-lg
+                                    hover:filter-none hover:drop-shadow-2xl
+                                    `
+                                }>
+                                <div
+                                    className="rounded-lg p-5 max-w-[20rem]"
+                                >
+                                    <img
+                                        src="https://42.fr/wp-content/uploads/2021/07/Transcendence-e1629765085487.jpg"
+                                        alt="project"
+                                        className="rounded-lg w-[100%] object-cover shadow-2xl" />
+                                </div>
 
-                <div
-                    className="mt-5 lg:mt-28 relative lg:overflow-scroll myscrollbar max-w-[95vw] min-w-[95vw] xl:min-w-[60vw] xl:max-w-[60vw] xl:h-[auto]  rounded-lg  p-5 lg:mx-5"
-                >
-                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-20 rounded-lg lg:p-5 hover:place-items-stretch">
-                        {
-                            projects.map((project: any, index: any) => {
-                                const randomIndex = Math.floor(Math.random() * 8)
+                                <div className="flex flex-col justify-between items-start space-y-6 p-5 xl:max-w-[70%] lg:max-w-[90%] ">
 
-                                return (
-                                    <div id={`${index}`}
-                                        className={`
-                                        stickyNote taped lg:!rotate-[${(!(randomIndex % 2)) ? '-3' : '3'}deg] bg-${project.color}
-                                        hover:shadow-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-101 hover:rotate-2
-                                    `}
-                                    >
-                                        <div className="
-                                        relative flex flex-col justify-center items-center bg-blue-500/55 m-2 p-5 rounded-lg
-                                    ">
-                                            <img
-                                                src={project.image}
-                                                alt="Project"
-                                                className="
-                                                relative -top-10 rounded-lg object-cover w-[90%] shadow-lg shadow-lime-800
-                                                hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-90 hover:rotate-6 
-                                            "
-                                            />
-                                            <h1 className="text-2xl font-bold text-white underline underline-offset-4">
-                                                {project.title}
-                                            </h1>
-                                            <p className="text-white">
-                                                {project.description}
-                                            </p>
+                                    <h5 className="text-2xl font-gochi">Projects</h5>
 
-                                            <button className="bg-white text-black py-2 px-8 rounded-lg mt-5">Discover Project</button>
-                                        </div>
+                                    <div className="flex justify-around items-start space-x-10 ">
+                                        <p className="font-gochi"> Title </p>
+                                        <p className="font-gochi"> Date </p>
                                     </div>
-                                )
-                            })
-                        }
 
-                    </div>
-
-                    <svg className="fixed top-0">
-                        <filter id="wavy2">
-                            <feTurbulence
-                                x="0"
-                                y="0"
-                                baseFrequency="0.02"
-                                numOctaves="5"
-                                seed="1"
-                            />
-                            <feDisplacementMap in="SourceGraphic" scale="20" />
-                        </filter>
-                    </svg>
-
-
+                                    <p className="font-gochi">
+                                        Voici un récap de mon cursus à l'école 42, des projects effectués, des notes obtenues et du code sources, HF ! Je suis sur le campus de 42 Lyon, de la promo 2021, piscine d'Août (objectivement la meilleure) !
+                                    </p>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
+
+                <svg className="fixed top-0">
+                    <filter id="wavy2">
+                        <feTurbulence
+                            x="0"
+                            y="0"
+                            baseFrequency="0.02"
+                            numOctaves="5"
+                            seed="1"
+                        />
+                        <feDisplacementMap in="SourceGraphic" scale="20" />
+                    </filter>
+                </svg>
             </div>
         </section>
     )

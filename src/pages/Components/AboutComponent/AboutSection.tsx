@@ -95,19 +95,13 @@ const AboutSection = () => {
 
     React.useEffect(() => {
         const handleScroll = (event: any) => {
-            return ;
+            return;
             if (window.scrollY == 0 && event.deltaY < 0) {
                 navigate('/');
             }
             if (Math.ceil(window.innerHeight + window.scrollY) >= Math.floor(document.body.scrollHeight - 100) && event.deltaY > 0) {
                 navigate('/projects');
             }
-
-            // console.table({
-            //     innerHeight: window.innerHeight,
-            //     scrollY: window.scrollY,
-            //     bodyScrollHeight: document.body.scrollHeight,
-            // });
         };
         window.addEventListener('wheel', handleScroll);
         window.addEventListener('scroll', handleScroll);
@@ -128,7 +122,7 @@ const AboutSection = () => {
                     <div
 
                         className="
-                            shadow-sm relative grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-2 xl:gap-8
+                            relative grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-2 xl:gap-8
                             max-w-[90vw] min-w-[90vw] md:min-w-[90vw] md:max-w-[90vw] md:h-[90vh]
                             xl:min-w-[50vw] xl:max-w-[70vw] rounded-lg p-5 mx-5
                             "

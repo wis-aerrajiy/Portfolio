@@ -33,12 +33,12 @@ const Navbar = () => {
             if (window.scrollY > 50) {
                 setIsLogoVisible(false);
                 if (navRef && navRef.current) {
-                    (navRef.current as any).classList.add('bg-slate-500/20');
+                    (navRef.current as any).classList.add('md:bg-slate-500/20');
                 }
             } else {
                 setIsLogoVisible(true);
                 if (navRef && navRef.current) {
-                    (navRef.current as any).classList.remove('bg-slate-500/20');
+                    (navRef.current as any).classList.remove('md:bg-slate-500/20');
                 }
             }
         };
@@ -89,12 +89,12 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div ref={navRef} className='flex z-20 justify-between items-center h-24 px-4 text-white rounded-sm fixed top-0 w-full md:max-w-[100%] max-w-[100%]'>
+            <div ref={navRef} className='flex z-20 justify-between md:justify-around items-center h-24 px-4 text-white rounded-sm fixed top-0 w-full md:max-w-[100%] max-w-[100%]'>
                 <div>
-                    <img src={NavImages} alt="tailwindcss_logo" width="50px"
+                    <img src={NavImages} alt="logo" width="50px"
                         className={`
                             filter grayscale contrast-150 shadow-md border-slate-500 ring-1 ring-red-600/6 rounded-lg m-4
-                            ${!isLogoVisible && 'hidden'}
+                            ${!isLogoVisible && 'hidden md:block'}
                         `} />
                 </div>
 

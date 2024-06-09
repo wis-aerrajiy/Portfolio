@@ -95,7 +95,7 @@ const HeroSection = () => {
         { src: "/images/reactjs.svg", alt: "reactjs" },
     ];
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const { setSelectedBar } = React.useContext(SelectedBarContext);
     const imageRefs = images.map(() => React.useRef<HTMLImageElement>(null));
 
@@ -105,7 +105,7 @@ const HeroSection = () => {
         const randomPosition = (element: any) => {
             if (element.current) {
                 element.current.style.top = `${Math.floor(Math.random() * 80)}%`;
-                element.current.style.left = `${Math.floor(Math.random() * 40) + 10}%`;
+                element.current.style.left = `${Math.floor(Math.random() * 60) + 10}%`;
                 element.current.style.animationDuration = `${Math.floor(Math.random() * 4)}s`;
 
                 element.current.style.width = `${Math.floor(Math.random() * 150) + 100}px`;
@@ -115,17 +115,10 @@ const HeroSection = () => {
         imageRefs.forEach(randomPosition);
 
         const handleScroll = (event: any) => {
-            return ;
             if (Math.ceil(window.innerHeight + window.scrollY) >= Math.floor(document.body.scrollHeight) && event.deltaY > 0) {
                 setSelectedBar(1);
-                navigate('/about');
+                // navigate('/about');
             }
-
-            // console.table({
-            //     innerHeight: window.innerHeight,
-            //     scrollY: window.scrollY,
-            //     bodyScrollHeight: document.body.scrollHeight,
-            // });
         };
 
         window.addEventListener('wheel', handleScroll);
@@ -140,15 +133,13 @@ const HeroSection = () => {
         <>
             <section id="hero">
                 <div className="relative flex flex-col justify-center items-center  min-h-screen">
-                    <div className="flex flex-col space-y-6">
+                    <div className="flex flex-col space-y-6 z-10">
                         <h1 className="text-blue-900">
                             <InfosAnimation
                                 isInfinity={false}
                                 className="text-2xl md:text-6xl text-blue-900 font-bold"
                                 Wordsequence={
-                                    [
-                                        'Hi, I\'m Aiman Errajiy',
-                                    ]
+                                    [ 'Hi, I\'m Aiman Errajiy', ]
                                 }
                             />
                         </h1>
@@ -165,9 +156,9 @@ const HeroSection = () => {
                                 src={image.src}
                                 alt={image.alt}
                                 className="
-                                        absolute bottom-0 right-0 blur-[10px] transition duration-300 transform hover:scale-110 z-[1] opacity-45
-                                        shadow-lg animate-bounce
-                                    "
+                                    absolute bottom-0 right-0 blur-[10px] transition duration-300 transform hover:scale-110 opacity-45
+                                    shadow-lg animate-bounce object-cover
+                                "
                             />
                         ))
                     }

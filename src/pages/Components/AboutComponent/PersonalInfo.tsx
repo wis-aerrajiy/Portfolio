@@ -19,7 +19,6 @@ const PersonalInfo = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-center items-center m-auto h-[auto] w-[85vw] xl:w-[50vw] md:h-screen max-w-[90vw] rounded-lg">
                 <Slide
                     direction="left" triggerOnce className="max-w-[90vw]"
-                    // delay={2000}
                 >
                     <div className="mx-1">
                         <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
