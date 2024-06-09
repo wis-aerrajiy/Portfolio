@@ -24,13 +24,14 @@ const ProjectsSection = () => {
 
                                 <div
                                     className={`
-                                    bg-slate-500/30 m-5 rounded-md
-                                    flex flex-col-reverse
-                                    ${(i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse')}
-                                    justify-between items-center space-y-3
-                                    filter drop-shadow-lg
-                                    hover:filter-none hover:drop-shadow-2xl
-                                    p-5 relative hover:scale-95 hover:duration-500 hover:ease-in-out hover:-z-30
+                                        bg-slate-500/0 m-5 rounded-md
+                                        flex flex-col-reverse
+                                        ${(i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse')}
+                                        justify-between items-center space-y-0
+                                        filter drop-shadow-lg
+                                        hover:filter-none hover:drop-shadow-2xl
+                                        p-5 relative hover:scale-95 hover:duration-500 hover:ease-in-out hover:bg-black
+                                        md:filterO 
                                     `
                                     }>
 
@@ -52,9 +53,22 @@ const ProjectsSection = () => {
                                         </div>
 
                                         <p className="font-gochi">
-                                            Voici un récap de mon cursus à l'école 42, des projects effectués, des notes obtenues et du code sources, HF ! Je suis sur le campus de 42 Lyon, de la promo 2021, piscine d'Août (objectivement la meilleure) !
+                                        In this project, we use Docker extensively with docker-compose to manage various constraints: hosting a multi-container WordPress, a reverse proxy, and SSL certificates. I leveraged my experience with Docker to implement all the additional features: a Redis cache, an FTP server, a database GUI, monitoring, and the creation and hosting of a NestJS site.
                                         </p>
                                     </div>
+
+                                    <div
+                                        className="
+                                            absolute top-0 left-0 w-[100%] h-[100%] bg-slate-500/55 rounded-md flex justify-center items-center p-5 z-10 
+                                            opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out 
+
+                                        "
+                                    >
+                                        <button className="py-2 md:px-24 px-5 bg-slate-500/50 rounded-lg">
+                                            Disover More ...
+                                        </button>
+                                    </div>
+
                                 </div>
                             </Slide>
                         ))
