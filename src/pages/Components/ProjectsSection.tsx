@@ -69,6 +69,9 @@ const ProjectsSection = () => {
                                         </button>
                                     </div>
 
+                                    <div className="absolute bg-red-500 p-3 top-0 left-0 rounded-tl-md rounded-br-md z-0" > </div>
+                                    <div className="absolute bg-red-500 p-3 top-0 right-0 rounded-tr-md rounded-bl-md z-0" > </div>
+
                                 </div>
                             </Slide>
                         ))
