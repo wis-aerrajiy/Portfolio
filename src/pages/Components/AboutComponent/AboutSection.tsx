@@ -63,7 +63,7 @@ interface SkillProps {
 
 const SkillComponent = ({ skill }: SkillProps) => {
     return (
-        <div className="relative flex flex-row justify-between items-center px-2 py-1 !bg-[#EAF9D0] border border-slate-700 rounded-lg rounded-tl-md hover:scale-105 transition-all duration-500">
+        <div className="relative flex m-1 flex-row justify-between items-center px-2 py-1 !bg-[#EAF9D0] border border-slate-700 rounded-lg rounded-tl-md hover:scale-105 transition-all duration-500">
             <skill.icon className="text-4xl p-2 rounded-lg border border-gray-300" />
 
             <div className="flex justify-center items-start font-gochi text-2xl text-slate-700 ring-offset-opacity-50 px-1">
@@ -201,7 +201,7 @@ const AboutSection = () => {
                                     <Icons.RxDownload className="mx-3" /> Download Resume
                                 </div>
 
-                                <div className="flex justify-center items-center flex-wrap space-x-3 space-y-2 body-container">
+                                <div className="flex justify-start items-start flex-wrap body-container">
                                     {TechnicalSkills.map((skill) => (
                                         <SkillComponent key={skill.id} skill={skill} />
                                     ))}
@@ -222,7 +222,7 @@ const AboutSection = () => {
                                     <Icons.RxDownload className="mx-3" /> Education Path
                                 </div>
 
-                                <div className="flex justify-center items-center flex-wrap space-x-3 space-y-2">
+                                <div className="flex justify-center items-center flex-wrap ">
                                     {OtherSkills.map((skill) => (
                                         <SkillComponent key={skill.id} skill={skill} />
                                     ))}
