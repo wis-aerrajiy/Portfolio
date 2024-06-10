@@ -14,9 +14,9 @@ const ProjectsSection = () => {
 
     return (
         <section id="projects">
-            <div className="flex flex-col justify-center items-center min-h-screen max-w-[90vw] min-w-[90vw] xl:min-w-[90vw] xl:max-w-[40vw] rounded-lg  p-5 lg:mx-5">
+            <div className="flex flex-col justify-center items-center min-h-screen max-w-[95vw] min-w-[95vw] xl:min-w-[90vw] xl:max-w-[40vw] rounded-lg  p-5 lg:mx-5">
 
-                <div className="flex flex-col justify-between items-center max-w-[95vw] min-w-[95vw] xl:max-w-[70vw] xl:min-w-[70vw] md:max-w-[90vw] md:min-w-[90vw] mt-24">
+                <div className="flex flex-col justify-between items-center max-w-[100vw] min-w-[100vw] xl:max-w-[70vw] xl:min-w-[70vw] md:max-w-[90vw] md:min-w-[90vw] mt-24">
 
                     {
                         Array.from({ length: 6 }).map((_, i) => (
