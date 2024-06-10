@@ -31,7 +31,6 @@ const ProjectsSection = () => {
                                         filter drop-shadow-lg
                                         hover:filter-none hover:drop-shadow-2xl
                                         p-5 relative hover:scale-95 hover:duration-500 hover:ease-in-out
-                                        md:filterO 
                                     `
                                     }>
 
@@ -59,10 +58,13 @@ const ProjectsSection = () => {
                                         className="
                                             absolute top-0 left-0 w-[100%] h-[100%] bg-slate-500/55 rounded-md flex justify-center items-center p-5 z-10 
                                             opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out 
+                                            shadow-lg hover:shadow-xl
                                         "
                                     >
                                         <button
-                                            className="py-2 md:px-24 px-5 backdrop-filter backdrop-blur-lg bg-red-500/55 text-white font-gochi rounded-md shadow-lg hover:shadow-xl transition-shadow duration-500 ease-in-out"
+                                            className="
+                                                py-2 md:px-24 px-5 backdrop-filter backdrop-blur-lg bg-red-500/55 text-white font-gochi rounded-md shadow-lg hover:shadow-xl transition-shadow duration-500 ease-in-out
+                                            "
                                             onClick={() => {
                                                 alert('Discover More ...')
                                             }}
