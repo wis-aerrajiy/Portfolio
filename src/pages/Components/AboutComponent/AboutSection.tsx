@@ -222,7 +222,7 @@ const AboutSection = () => {
                                     <Icons.RxDownload className="mx-3" /> Education Path
                                 </div>
 
-                                <div className="flex justify-center items-center flex-wrap ">
+                                <div className="flex justify-start items-start flex-wrap body-container">
                                     {OtherSkills.map((skill) => (
                                         <SkillComponent key={skill.id} skill={skill} />
                                     ))}
