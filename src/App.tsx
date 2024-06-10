@@ -24,7 +24,7 @@ class App extends Component {
                                 <Route path="/about"
                                     element={<About />}
                                 />
-                                <Route path="/projects"
+                                <Route path="/projects/*"
                                     element={<Projects />}
                                 />
                                 <Route path="*"

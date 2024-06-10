@@ -30,7 +30,7 @@ const ProjectsSection = () => {
                                         justify-between items-center space-y-0
                                         filter drop-shadow-lg
                                         hover:filter-none hover:drop-shadow-2xl
-                                        p-5 relative hover:scale-95 hover:duration-500 hover:ease-in-out hover:bg-black
+                                        p-5 relative hover:scale-95 hover:duration-500 hover:ease-in-out
                                         md:filterO 
                                     `
                                     }>
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
                                         </div>
 
                                         <p className="font-gochi">
-                                        In this project, we use Docker extensively with docker-compose to manage various constraints: hosting a multi-container WordPress, a reverse proxy, and SSL certificates. I leveraged my experience with Docker to implement all the additional features: a Redis cache, an FTP server, a database GUI, monitoring, and the creation and hosting of a NestJS site.
+                                            In this project, we use Docker extensively with docker-compose to manage various constraints: hosting a multi-container WordPress, a reverse proxy, and SSL certificates. I leveraged my experience with Docker to implement all the additional features: a Redis cache, an FTP server, a database GUI, monitoring, and the creation and hosting of a NestJS site.
                                         </p>
                                     </div>
 
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
                                         "
                                     >
                                         <button
-                                            className="py-2 md:px-24 px-5 bg-slate-500/50 rounded-lg"
+                                            className="py-2 md:px-24 px-5 backdrop-filter backdrop-blur-lg bg-red-500/55 text-white font-gochi rounded-md shadow-lg hover:shadow-xl transition-shadow duration-500 ease-in-out"
                                             onClick={() => {
                                                 alert('Discover More ...')
                                             }}
@@ -71,7 +71,7 @@ const ProjectsSection = () => {
                                         </button>
                                     </div>
 
-                                    <div className={`absolute bg-red-500 p-2 h-full top-0 ${(i % 2) ? 'left-0' : 'right-0'} rounded-tl-md rounded-br-md z-0 shadow-lg`} > </div>
+                                    <div className={`hidden md:block absolute bg-red-500 p-2 h-full top-0 ${(i % 2) ? 'left-0' : 'right-0'} rounded-tl-md rounded-br-md z-0 shadow-lg`} > </div>
 
                                 </div>
                             </Slide>
