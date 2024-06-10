@@ -26,7 +26,7 @@ const ProjectsSection = () => {
                                     className={`
                                         bg-slate-500/0 m-5 rounded-md
                                         flex flex-col-reverse
-                                        ${(i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse')}
+                                        ${((i % 2) ? 'md:flex-row' : 'md:flex-row-reverse')}
                                         justify-between items-center space-y-0
                                         filter drop-shadow-lg
                                         hover:filter-none hover:drop-shadow-2xl
@@ -35,13 +35,11 @@ const ProjectsSection = () => {
                                     `
                                     }>
 
-                                    <div
-                                        className="rounded-lg p-5 max-w-[20rem]"
-                                    >
-                                        <img
-                                            src="https://42.fr/wp-content/uploads/2021/07/Transcendence-e1629765085487.jpg"
-                                            alt="project"
-                                            className="rounded-lg w-[100%] object-cover shadow-2xl" />
+                                    <div className=" relative rounded-lg p-5 max-w-[20rem]" >
+                                        <img src="https://42.fr/wp-content/uploads/2021/07/Transcendence-e1629765085487.jpg" alt="project" className="rounded-lg w-[100%] object-cover shadow-2xl" />
+                                        <div className="absolute bg-red-500 p-2 top-0 left-0 rounded-tl-md rounded-md shadow-lg" >
+                                            new project
+                                        </div>
                                     </div>
 
                                     <div className="flex flex-col justify-between items-start space-y-6 p-5 xl:max-w-[70%] lg:max-w-[90%] ">
@@ -61,16 +59,19 @@ const ProjectsSection = () => {
                                         className="
                                             absolute top-0 left-0 w-[100%] h-[100%] bg-slate-500/55 rounded-md flex justify-center items-center p-5 z-10 
                                             opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out 
-
                                         "
                                     >
-                                        <button className="py-2 md:px-24 px-5 bg-slate-500/50 rounded-lg">
+                                        <button
+                                            className="py-2 md:px-24 px-5 bg-slate-500/50 rounded-lg"
+                                            onClick={() => {
+                                                alert('Discover More ...')
+                                            }}
+                                        >
                                             Disover More ...
                                         </button>
                                     </div>
 
-                                    <div className="absolute bg-red-500 p-3 top-0 left-0 rounded-tl-md rounded-br-md z-0" > </div>
-                                    <div className="absolute bg-red-500 p-3 top-0 right-0 rounded-tr-md rounded-bl-md z-0" > </div>
+                                    <div className={`absolute bg-red-500 p-2 h-full top-0 ${(i % 2) ? 'left-0' : 'right-0'} rounded-tl-md rounded-br-md z-0 shadow-lg`} > </div>
 
                                 </div>
                             </Slide>
