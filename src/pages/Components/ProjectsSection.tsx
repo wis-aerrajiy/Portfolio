@@ -1,16 +1,22 @@
 import { Slide } from "react-awesome-reveal";
 
 const ProjectsSection = () => {
-    const projects: any = [];
-
-    for (let i = 0; i < 2; i++) {
-        projects.push({
-            title: 'Project',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.',
-            image: 'https://42.fr/wp-content/uploads/2021/07/Transcendence-e1629765085487.jpg',
-            color: '[#D9F5AA]/55'
-        })
-    }
+    const projects = [
+        {
+            title: "Personal Portfolio",
+            date: "2023-12-05",
+            categorie: "web dev",
+            image: "/projects/portfolio.png",
+            description: "In this project, I used ReactJS and TailwindCSS to create a responsive and visually appealing user interface. Leveraging ReactJS allowed me to build dynamic and interactive components, while TailwindCSS enabled rapid styling with its utility-first approach. The project demonstrates my ability to integrate front-end technologies to deliver a polished and user-friendly experience.",
+        },
+        {
+            title: "Projects",
+            date: "2023-12-05",
+            categorie: "web dev",
+            image: "https://42.fr/wp-content/uploads/2021/07/Transcendence-e1629765085487.jpg",
+            description: "In this project, we use Docker extensively with docker-compose to manage various constraints: hosting a multi-container WordPress, a reverse proxy, and SSL certificates. I leveraged my experience with Docker to implement all the additional features: a Redis cache, an FTP server, a database GUI, monitoring, and the creation and hosting of a NestJS site.",
+        },
+    ];
 
     return (
         <section id="projects">
@@ -19,7 +25,7 @@ const ProjectsSection = () => {
                 <div className="flex flex-col justify-between items-center max-w-[100vw] min-w-[100vw] xl:max-w-[70vw] xl:min-w-[70vw] md:max-w-[90vw] md:min-w-[90vw] mt-24">
 
                     {
-                        Array.from({ length: 6 }).map((_, i) => (
+                        projects.map((project: any, i: number) => (
                             <Slide key={i} direction={`${(i % 2) ? 'left' : 'right'}`} triggerOnce delay={i * 100} damping={0.1} className="">
 
                                 <div
@@ -35,22 +41,26 @@ const ProjectsSection = () => {
                                     }>
 
                                     <div className=" relative rounded-lg p-5 max-w-[20rem]" >
-                                        <img src="https://42.fr/wp-content/uploads/2021/07/Transcendence-e1629765085487.jpg" alt="project" className="rounded-lg w-[100%] object-cover shadow-2xl" />
+                                        <img src={project.image} alt="project" className="rounded-lg w-[100%] object-cover shadow-2xl" />
                                         <div className="absolute bg-red-500 p-2 top-0 left-0 rounded-tl-md rounded-md shadow-lg" >
-                                            new project
+                                            {project.categorie}
                                         </div>
                                     </div>
 
                                     <div className="flex flex-col justify-between items-start space-y-6 p-5 xl:max-w-[70%] lg:max-w-[90%] ">
 
-                                        <h5 className="text-2xl font-gochi">Projects</h5>
+                                        <h5 className="text-2xl font-gochi">
+                                            {project.title}
+                                        </h5>
 
                                         <div className="flex justify-around items-start space-x-10 ">
-                                            <p className="font-gochi"> Date </p>
+                                            <p className="font-gochi">
+                                                {project.date}
+                                            </p>
                                         </div>
 
                                         <p className="font-gochi">
-                                            In this project, we use Docker extensively with docker-compose to manage various constraints: hosting a multi-container WordPress, a reverse proxy, and SSL certificates. I leveraged my experience with Docker to implement all the additional features: a Redis cache, an FTP server, a database GUI, monitoring, and the creation and hosting of a NestJS site.
+                                            {project.description}
                                         </p>
                                     </div>
 
@@ -73,7 +83,7 @@ const ProjectsSection = () => {
                                         </button>
                                     </div>
 
-                                    <div className={`hidden md:block absolute bg-red-500 p-2 h-full top-0 ${(i % 2) ? 'left-0' : 'right-0'} rounded-tl-md rounded-br-md z-0 shadow-lg`} > </div>
+                                    <div className={`absolute bg-red-500 p-2 md:h-full top-0 ${(i % 2) ? 'left-0' : 'right-0'} rounded-tl-md rounded-br-md z-0 shadow-lg`} > </div>
 
                                 </div>
                             </Slide>

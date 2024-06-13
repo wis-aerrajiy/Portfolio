@@ -7,21 +7,21 @@ import React from "react";
 
 const TechnicalSkills = [
     { id: 0, name: "Web Dev", level: "80%", icon: Icons.PiDevToLogoFill },
-    { id: 1, name: "TypeScript", level: "80%", icon: Icons.SiTypescript },
-    { id: 2, name: "JavaScript", level: "80%", icon: Icons.IoLogoJavascript },
     { id: 3, name: "C++", level: "80%", icon: Icons.TbBrandCpp },
-    { id: 4, name: "Python", level: "70%", icon: Icons.FaPython },
+    { id: 1, name: "TypeScript", level: "80%", icon: Icons.SiTypescript },
     { id: 5, name: "React", level: "80%", icon: Icons.FaReact },
+    { id: 2, name: "JavaScript", level: "80%", icon: Icons.IoLogoJavascript },
     { id: 6, name: "Node.js", level: "80%", icon: Icons.FaNodeJs },
+    { id: 4, name: "Python", level: "70%", icon: Icons.FaPython },
     { id: 7, name: "Nest.js", level: "70%", icon: Icons.SiNestjs },
-    { id: 8, name: "TailwindCSS", level: "80%", icon: Icons.RiTailwindCssFill },
+    { id: 8, name: "Tailwind", level: "80%", icon: Icons.RiTailwindCssFill },
     { id: 9, name: "MongoDB", level: "80%", icon: Icons.SiMongodb },
     { id: 10, name: "PostgreSQL", level: "70%", icon: Icons.BiLogoPostgresql },
+    { id: 11, name: "Docker", level: "80%", icon: Icons.FaDocker },
 ];
 
 const OtherSkills = [
-    { id: 0, name: "Docker", level: "80%", icon: Icons.FaDocker },
-    { id: 1, name: "VC Git", level: "80%", icon: Icons.FaGitAlt },
+    { id: 1, name: "Version control Git", level: "80%", icon: Icons.FaGitAlt },
     { id: 2, name: "Socket.io", level: "80%", icon: Icons.SiSocketdotio },
     { id: 3, name: "DevOps", level: "80%", icon: Icons.SiAzuredevops },
     { id: 4, name: "Problem Solving", level: "80%", icon: Icons.ImCheckmark },
@@ -41,7 +41,7 @@ const Certificates = [
     {
         id: 1,
         src: " Edx.org",
-        name: "Google Cloud Computing Foundations at Coursera Edx.org Google Cloud",
+        name: "google Cloud Computing Foundations at Coursera Edx.org google Cloud",
         link: "https://courses.edx.org/dashboard/programs/1fcffef0-468a-483f-95aa-87e2d4d2c408/?_gl=1*1du810v*_ga*NDA3NzczOTguMTcxNjQ4ODE4Ng..*_ga_D3KS4KMDT0*MTcxNzI5MjY1Mi42LjAuMTcxNzI5MjY1Mi42MC4wLjA.",
     },
     {
@@ -64,7 +64,7 @@ interface SkillProps {
 const SkillComponent = ({ skill }: SkillProps) => {
     return (
         <div className="relative flex m-1 flex-row justify-between items-center px-2 py-1 !bg-[#EAF9D0] border border-slate-700 rounded-lg rounded-tl-md hover:scale-105 transition-all duration-500">
-            <skill.icon className="text-4xl p-2 rounded-lg border border-gray-300" />
+            <skill.icon className="text-4xl p-2 rounded-lg" />
 
             <div className="flex justify-center items-start font-gochi text-2xl text-slate-700 ring-offset-opacity-50 px-1">
                 <span className="font-gochi md:text-xl text-sm !font-bold">
@@ -201,7 +201,7 @@ const AboutSection = () => {
                                     <Icons.RxDownload className="mx-3" /> Download Resume
                                 </div>
 
-                                <div className="flex justify-start items-start flex-wrap body-container">
+                                <div className="flex justify-start items-start flex-wrap">
                                     {TechnicalSkills.map((skill) => (
                                         <SkillComponent key={skill.id} skill={skill} />
                                     ))}
@@ -222,30 +222,14 @@ const AboutSection = () => {
                                     <Icons.RxDownload className="mx-3" /> Education Path
                                 </div>
 
-                                <div className="flex justify-start items-start flex-wrap body-container">
+                                <div className="flex justify-start items-start flex-wrap ">
                                     {OtherSkills.map((skill) => (
                                         <SkillComponent key={skill.id} skill={skill} />
                                     ))}
                                 </div>
                             </div>
 
-                            <div className="flex flex-col stickyNote taped space-y-5 bg-[#AAE5F5]/55 md:rotate-[12deg]">
-                                <div className="flex justify-center items-center w-full">
-                                    <h1 className="underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi">
-                                        Development Philosophy
-                                    </h1>
-                                </div>
 
-                                <div className="flex flex-col">
-                                    <p className="text-lg text-slate-500 text-justify font-gochi">
-                                        I believe in writing clean, maintainable code and
-                                        continuously improving through feedback. Embracing Agile
-                                        and DevOps principles, I focus on collaboration,
-                                        automation, and bridging the gap between development and
-                                        operations.
-                                    </p>
-                                </div>
-                            </div>
 
                             <div className="flex flex-col stickyNote taped space-y-5 bg-[#A9F4DB]/55 md:rotate-[10deg]">
                                 <div className="flex justify-center items-center w-full">
@@ -256,11 +240,8 @@ const AboutSection = () => {
 
                                 <div className="flex flex-col gap-5">
                                     <p className="text-lg text-slate-500 text-justify font-gochi">
-                                        A digital technology architect with a passion for software
-                                        development at 1337 Coding School.
-                                        <br />
                                         <span className="font-bold text-slate-500">
-                                            Certifications:
+                                            My certifications:
                                         </span>
                                     </p>
 
@@ -289,6 +270,24 @@ const AboutSection = () => {
                                 </div>
                             </div>
 
+                            <div className="flex flex-col stickyNote taped space-y-5 bg-[#AAE5F5]/55 md:rotate-[12deg]">
+                                <div className="flex justify-center items-center w-full">
+                                    <h1 className="underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi">
+                                        Development Philosophy
+                                    </h1>
+                                </div>
+
+                                <div className="flex flex-col">
+                                    <p className="text-lg text-slate-500 text-justify font-gochi">
+                                        I believe in writing clean, maintainable code and
+                                        continuously improving through feedback. Embracing Agile
+                                        and DevOps principles, I focus on collaboration,
+                                        automation, and bridging the gap between development and
+                                        operations.
+                                    </p>
+                                </div>
+                            </div>
+                            
                         </Fade>
                         <div className="flex flex-col stickyNote taped space-y-5 bg-[#C0D2F5]/55 md:col-start-1 md:col-span-2 md:row-span-2">
                             <div className="flex justify-center items-center w-full">
