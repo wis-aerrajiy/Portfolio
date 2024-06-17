@@ -132,7 +132,7 @@ const HeroSection = () => {
     return (
         <>
             <section id="hero">
-                <div className="relative flex flex-col justify-center items-center  min-h-screen">
+                <div className="relative flex flex-col justify-center items-center  min-h-screen overflow-x-hidden">
                     <div className="flex flex-col space-y-6 z-10">
                         <h1 className="text-blue-900">
                             <InfosAnimation
