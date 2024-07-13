@@ -1,6 +1,6 @@
 import * as Icons from "../Icons";
 import dabous from "../../../assets/dabous.png";
-import { Slide } from "react-awesome-reveal";
+// import { Slide } from "react-awesome-reveal";
 
 const PersonalInfo = () => {
     const socials = [
@@ -17,9 +17,9 @@ const PersonalInfo = () => {
     return (
         <div className="bg-rose-100/5 min-h-screen min-w-[90vw] rounded-md">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-center items-center m-auto h-[auto] w-[85vw] xl:w-[50vw] md:h-screen max-w-[90vw] rounded-lg">
-                <Slide
+                {/* <Slide
                     direction="left" triggerOnce className="max-w-[90vw]"
-                >
+                > */}
                     <div className="mx-1">
                         <div className="stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg]">
                             <div className="relative -z-1 ring-1 ring-gray-600/15">
@@ -46,12 +46,12 @@ const PersonalInfo = () => {
                             </p>
                         </div>
                     </div>
-                </Slide>
+                {/* </Slide> */}
 
-                <Slide
+                {/* <Slide
                     direction="right" triggerOnce className="max-w-[90vw]"
                     // delay={2000}
-                >
+                > */ }
 
                     <div className="mx-1">
                         <div className="stickyNote taped bg-[#A9F4DB] mx-5 ">
@@ -85,7 +85,7 @@ const PersonalInfo = () => {
                             </div>
                         </div>
                     </div>
-                </Slide>
+                {/* </Slide> */}
 
                 <div className="md:row-start-1 md:row-end-2 md:row-span-2 md:col-span-2 md:max-h-[1px]">
                     <div className="flex justify-center items-center stickyNote bg-[#A9F4DB]/40 !rotate-[-3deg] ">

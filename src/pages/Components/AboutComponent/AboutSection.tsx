@@ -1,6 +1,6 @@
 import * as Icons from "../Icons";
 import "../../../index.css";
-import { Fade } from "react-awesome-reveal";
+// import { Fade } from "react-awesome-reveal";
 import PersonalInfo from "./PersonalInfo";
 import { useNavigate } from "react-router-dom";
 import React from "react";
@@ -127,8 +127,9 @@ const AboutSection = () => {
                             xl:min-w-[50vw] xl:max-w-[70vw] rounded-lg p-5 mx-5
                             "
                     >
-
+                        {/*
                         <Fade cascade direction="up" triggerOnce damping={0.01}>
+                        */}
 
                             <div className="flex flex-col stickyNote taped space-y-5 shadow-md ring ring-red-600 bg-[#F6EDA9]/55 md:!rotate-[-3deg]">
                                 <div className="flex justify-center items-center w-full">
@@ -288,7 +289,8 @@ const AboutSection = () => {
                                 </div>
                             </div>
                             
-                        </Fade>
+                        {/*</Fade>*/}
+
                         <div className="flex flex-col stickyNote taped space-y-5 bg-[#C0D2F5]/55 md:col-start-1 md:col-span-2 md:row-span-2">
                             <div className="flex justify-center items-center w-full">
                                 <h1 className="underline underline-offset-4 font-extrabold text-2xl md:rotate-[0deg] font-gochi">
